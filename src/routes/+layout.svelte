@@ -2,7 +2,6 @@
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import * as THREE from 'three';
-	import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 	import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 	let { children } = $props();
@@ -57,9 +56,11 @@
 			mainModel.position.set(-1, -3, 0);
 
 			mainModel.traverse((child) => {
-				// todo this gives a warning bc dumb
-				if (child instanceof THREE.Mesh) {
-					child.material = pbrMaterial;
+				let mesh = child as THREE.Mesh;
+				if (mesh.isMesh) {
+					mesh.material = pbrMaterial;
+					mesh.material.transparent = true;
+					mesh.material.opacity = 0;
 				}
 			});
 		});
@@ -73,12 +74,25 @@
 
 		window.addEventListener('resize', handleResize);
 
+		let lastTime = performance.now();
 		const animate = () => {
 			frameId = requestAnimationFrame(animate);
 
-			const time = Date.now() * 0.0001;
+			let deltaTime = performance.now() - lastTime;
+			lastTime = performance.now();
+
+			const time = Date.now() / 10_000;
 			if (mainModel) {
 				mainModel.rotation.y = time * 0.5;
+
+				mainModel.traverse((child) => {
+					let mesh = child as THREE.Mesh;
+					if (mesh.isMesh && mesh.material instanceof THREE.MeshPhysicalMaterial) {
+						if (mesh.material.opacity < 1) {
+							mesh.material.opacity += deltaTime / 1000; // 1 second fade in
+						}
+					}
+				});
 			}
 
 			directionalLight.position.x = Math.sin(time * 4);
