@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import * as THREE from 'three';
 	import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
+	import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 	let { children } = $props();
 
@@ -38,23 +39,26 @@
 		directionalLight = new THREE.DirectionalLight(0xffffff, 1);
 		scene.add(directionalLight);
 
-		const loader = new OBJLoader();
-		loader.load('/obj/skye2000-form-01.obj', (obj) => {
+		// const loader = new OBJLoader();
+		const loader = new GLTFLoader();
+		loader.load('/obj/skye2000-form-01.glb', (obj) => {
 			let pbrMaterial = new THREE.MeshPhysicalMaterial({
 				color: 0xeeaaff,
-				metalness: 0.96,
+				metalness: 1,
 				roughness: 0
 			});
 
-			mainModel = obj;
+			mainModel = obj.scene;
 			scene.add(mainModel);
 
-			const scalar = 0.04;
+			const scalar = 0.02;
 			mainModel.scale.set(scalar, scalar, scalar);
 
+			mainModel.position.set(-1, -3, 0);
+
 			mainModel.traverse((child) => {
+				// todo this gives a warning bc dumb
 				if (child instanceof THREE.Mesh) {
-					// todo this gives a warning bc dumb
 					child.material = pbrMaterial;
 				}
 			});
@@ -74,7 +78,7 @@
 
 			const time = Date.now() * 0.0001;
 			if (mainModel) {
-				mainModel.rotation.y = time * 0.2;
+				mainModel.rotation.y = time * 0.5;
 			}
 
 			directionalLight.position.x = Math.sin(time * 4);
@@ -109,7 +113,7 @@
 			</div>
 		</div>
 
-		<p class="font-mono text-sm text-neutral-300">Programmer and artist 🏴󠁧󠁢󠁳󠁣󠁴󠁿🏴󠁧󠁢󠁥󠁮󠁧󠁿</p>
+		<p class="font-mono text-sm text-neutral-300">Programmer and artist <span class="font-emoji">🏴󠁧󠁢󠁥󠁮󠁧󠁿🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>󠁧󠁿</p>
 
 		{@render children()}
 
@@ -123,7 +127,7 @@
 			<img src="https://cyber.dabamos.de/88x31/anythingbut.gif" alt="anything but chrome" />
 			<img src="https://cyber.dabamos.de/88x31/chrmevil.gif" alt="google chrome is evil" />
 			<img src="https://cyber.dabamos.de/88x31/cc-by-nc-sa.gif" alt="cc by nc sa" />
-			<a target="_blank" href="https://kahoneki.com/"><img src="/kaho88x31.png" alt="kahoneki"></a>
+			<a target="_blank" href="https://kahoneki.com/"><img src="/kaho88x31.png" alt="kahoneki" /></a>
 		</div>
 	</div>
 </div>
