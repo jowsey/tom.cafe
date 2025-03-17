@@ -97,7 +97,7 @@
 
 <div class="flex h-screen w-screen flex-col items-center justify-center gap-y-2 px-2 text-neutral-50">
 	<div
-		class="w-full max-w-xl rounded-tr-lg rounded-bl-lg border border-neutral-300 bg-transparent px-4 py-4 shadow-sm backdrop-blur-xl transition-all sm:px-8"
+		class="w-full max-w-xl rounded-tr-xl rounded-bl-xl border border-neutral-300 bg-transparent px-4 py-4 shadow-sm backdrop-blur-xl transition-all sm:px-8"
 	>
 		<div class="flex items-center justify-between">
 			<p class="font-bold transition-all sm:text-xl">Thomas Jowsey</p>
