@@ -1,27 +1,35 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
-	import * as THREE from 'three';
+	import {
+		MeshPhysicalMaterial,
+		Scene,
+		PerspectiveCamera,
+		WebGLRenderer,
+		Object3D,
+		DirectionalLight,
+		AmbientLight, Mesh
+	} from 'three';
 	import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 	let { children } = $props();
 
 	let canvas: HTMLCanvasElement;
-	let scene: THREE.Scene;
-	let camera: THREE.PerspectiveCamera;
-	let renderer: THREE.WebGLRenderer;
-	let mainModel: THREE.Object3D;
-	let directionalLight: THREE.DirectionalLight;
+	let scene: Scene;
+	let camera: PerspectiveCamera;
+	let renderer: WebGLRenderer;
+	let mainModel: Object3D;
+	let directionalLight: DirectionalLight;
 	let frameId: number;
 
 	onMount(() => {
-		scene = new THREE.Scene();
+		scene = new Scene();
 
-		camera = new THREE.PerspectiveCamera(90, window.innerWidth / window.innerHeight, 1, 100);
+		camera = new PerspectiveCamera(90, window.innerWidth / window.innerHeight, 1, 100);
 		camera.position.y = -5;
 		camera.position.z = 10;
 
-		renderer = new THREE.WebGLRenderer({
+		renderer = new WebGLRenderer({
 			canvas,
 			alpha: true,
 			antialias: true,
@@ -32,16 +40,16 @@
 		renderer.setClearColor(0x000000, 1);
 		renderer.setPixelRatio(window.devicePixelRatio);
 
-		const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+		const ambientLight = new AmbientLight(0xffffff, 0.5);
 		scene.add(ambientLight);
 
-		directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+		directionalLight = new DirectionalLight(0xffffff, 1);
 		scene.add(directionalLight);
 
 		// const loader = new OBJLoader();
 		const loader = new GLTFLoader();
 		loader.load('/obj/skye2000-form-01.glb', (obj) => {
-			let pbrMaterial = new THREE.MeshPhysicalMaterial({
+			let pbrMaterial = new MeshPhysicalMaterial({
 				color: 0xeeaaff,
 				metalness: 1,
 				roughness: 0
@@ -56,7 +64,7 @@
 			mainModel.position.set(-1, -3, 0);
 
 			mainModel.traverse((child) => {
-				let mesh = child as THREE.Mesh;
+				let mesh = child as Mesh;
 				if (mesh.isMesh) {
 					mesh.material = pbrMaterial;
 					mesh.material.transparent = true;
@@ -86,8 +94,8 @@
 				mainModel.rotation.y = time * 0.5;
 
 				mainModel.traverse((child) => {
-					let mesh = child as THREE.Mesh;
-					if (mesh.isMesh && mesh.material instanceof THREE.MeshPhysicalMaterial) {
+					let mesh = child as Mesh;
+					if (mesh.isMesh && mesh.material instanceof MeshPhysicalMaterial) {
 						if (mesh.material.opacity < 1) {
 							mesh.material.opacity += deltaTime / 1000; // 1 second fade in
 						}
@@ -127,7 +135,8 @@
 			</div>
 		</div>
 
-		<p class="font-mono text-sm text-neutral-300">Programmer and artist <span class="font-emoji">🏴󠁧󠁢󠁥󠁮󠁧󠁿🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>󠁧󠁿</p>
+		<p class="font-mono text-sm text-neutral-300">Programmer and artist <span class="font-emoji">🏴󠁧󠁢󠁥󠁮󠁧󠁿🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>󠁧󠁿
+		</p>
 
 		{@render children()}
 
