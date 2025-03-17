@@ -42,7 +42,7 @@
 		loader.load('/obj/skye2000-form-01.obj', (obj) => {
 			let pbrMaterial = new THREE.MeshPhysicalMaterial({
 				color: 0xeeaaff,
-				metalness: 0.9,
+				metalness: 0.96,
 				roughness: 0
 			});
 
