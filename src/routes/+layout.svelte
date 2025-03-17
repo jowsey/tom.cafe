@@ -3,7 +3,6 @@
 	import { onMount } from 'svelte';
 	import * as THREE from 'three';
 	import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
-	import { scale } from 'svelte/transition';
 
 	let { children } = $props();
 
@@ -55,6 +54,7 @@
 
 			mainModel.traverse((child) => {
 				if (child instanceof THREE.Mesh) {
+					// todo this gives a warning bc dumb
 					child.material = pbrMaterial;
 				}
 			});
@@ -77,8 +77,8 @@
 				mainModel.rotation.y = time * 0.2;
 			}
 
-			directionalLight.position.x = Math.sin(time) * 5;
-			directionalLight.position.y = Math.cos(time) * 5;
+			directionalLight.position.x = Math.sin(time * 4);
+			directionalLight.position.y = Math.cos(time * 4);
 
 			renderer.render(scene, camera);
 		};
@@ -95,29 +95,34 @@
 
 <canvas class="fixed -z-10" bind:this={canvas}></canvas>
 
-<div class="flex h-screen w-screen items-center justify-center">
+<div class="flex h-screen w-screen flex-col items-center justify-center gap-y-2 px-2 text-neutral-50">
 	<div
-		class="mx-2 w-full max-w-xl rounded-tr-xl rounded-bl-xl border border-neutral-300 bg-transparent px-8 py-4 text-neutral-50 shadow-sm backdrop-blur-xl transition-all sm:mx-4"
+		class="w-full max-w-xl rounded-tr-lg rounded-bl-lg border border-neutral-300 bg-transparent px-4 py-4 shadow-sm backdrop-blur-xl transition-all sm:px-8"
 	>
 		<div class="flex items-center justify-between">
-			<p class="text-xl font-bold transition-all">Thomas Jowsey</p>
-			<div class="flex gap-x-4 text-sm transition-all *:hover:underline">
+			<p class="font-bold transition-all sm:text-xl">Thomas Jowsey</p>
+			<div class="flex gap-x-2 text-sm *:hover:underline sm:gap-x-4">
+				<a target="_blank" href="https://github.com/jowsey">git</a>
 				<a target="_blank" href="https://compiled.itch.io">itch</a>
 				<a target="_blank" href="https://bsky.app/profile/tom.cafe">bsky</a>
 				<a target="_blank" href="https://linkedin.com/in/jowsey">lnkdn</a>
 			</div>
 		</div>
 
-		<p class="mb-2 text-sm text-neutral-300">hey! i'm a programmer and artist 📍 Dundee, UK.</p>
-
-		<div
-			class="mb-4 flex items-center justify-evenly divide-neutral-500 rounded-md border border-neutral-500 px-2 py-1"
-		>
-			<a href="/portfolio">Portfolio</a>
-			<a href="/about">About</a>
-			<a href="/contact">Contact</a>
-		</div>
+		<p class="font-mono text-sm text-neutral-300">Programmer and artist 🏴󠁧󠁢󠁳󠁣󠁴󠁿🏴󠁧󠁢󠁥󠁮󠁧󠁿</p>
 
 		{@render children()}
+
+		<div class="mt-4 flex flex-wrap justify-center gap-1.5 *:h-7">
+			<img src="https://cyber.dabamos.de/88x31/built_notepad.gif" alt="built with microsoft notepad" />
+			<img src="https://cyber.dabamos.de/88x31/css3.gif" alt="made with cascading style sheets" />
+			<img src="http://88x31.nl/gifs/amd_powered.gif" alt="powered by amd" />
+			<img src="https://cyber.dabamos.de/88x31/bestviewed16bit.gif" alt="best viewed 1024x768 16bit color" />
+			<img src="https://cyber.dabamos.de/88x31/button25.gif" alt="pride flag" />
+			<img src="https://cyber.dabamos.de/88x31/archlinux.gif" alt="arch linux" />
+			<img src="https://cyber.dabamos.de/88x31/anythingbut.gif" alt="anything but chrome" />
+			<img src="https://cyber.dabamos.de/88x31/chrmevil.gif" alt="google chrome is evil" />
+			<img src="https://cyber.dabamos.de/88x31/cc-by-nc-sa.gif" alt="cc by nc sa" />
+		</div>
 	</div>
 </div>
