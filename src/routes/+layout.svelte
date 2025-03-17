@@ -113,7 +113,7 @@
 
 		{@render children()}
 
-		<div class="mt-4 flex flex-wrap justify-center gap-1.5 *:h-7">
+		<div class="mt-4 flex flex-wrap justify-center gap-1.5 **:h-7">
 			<img src="https://cyber.dabamos.de/88x31/built_notepad.gif" alt="built with microsoft notepad" />
 			<img src="https://cyber.dabamos.de/88x31/css3.gif" alt="made with cascading style sheets" />
 			<img src="http://88x31.nl/gifs/amd_powered.gif" alt="powered by amd" />
@@ -123,6 +123,7 @@
 			<img src="https://cyber.dabamos.de/88x31/anythingbut.gif" alt="anything but chrome" />
 			<img src="https://cyber.dabamos.de/88x31/chrmevil.gif" alt="google chrome is evil" />
 			<img src="https://cyber.dabamos.de/88x31/cc-by-nc-sa.gif" alt="cc by nc sa" />
+			<a target="_blank" href="https://kahoneki.com/"><img src="/kaho88x31.png" alt="kahoneki"></a>
 		</div>
 	</div>
 </div>
