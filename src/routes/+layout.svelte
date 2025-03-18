@@ -2,13 +2,14 @@
 	import '../app.css';
 	import { onMount } from 'svelte';
 	import {
-		MeshPhysicalMaterial,
-		Scene,
-		PerspectiveCamera,
-		WebGLRenderer,
-		Object3D,
+		AmbientLight,
 		DirectionalLight,
-		AmbientLight, Mesh
+		Mesh,
+		MeshPhysicalMaterial,
+		Object3D,
+		PerspectiveCamera,
+		Scene,
+		WebGLRenderer,
 	} from 'three';
 	import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
@@ -135,8 +136,7 @@
 			</div>
 		</div>
 
-		<p class="font-mono text-sm text-neutral-300">Programmer and artist <span class="font-emoji">🏴󠁧󠁢󠁥󠁮󠁧󠁿🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>󠁧󠁿
-		</p>
+		<p class="font-mono text-sm text-neutral-300">Programmer and artist <span class="font-emoji">🏴󠁧󠁢󠁥󠁮󠁧󠁿🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>󠁧󠁿</p>
 
 		{@render children()}
 
