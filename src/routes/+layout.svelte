@@ -143,7 +143,7 @@
 		<div class="mt-4 flex flex-wrap justify-center gap-1.5 **:h-7">
 			<img src="https://cyber.dabamos.de/88x31/built_notepad.gif" alt="built with microsoft notepad" />
 			<img src="https://cyber.dabamos.de/88x31/css3.gif" alt="made with cascading style sheets" />
-			<img src="http://88x31.nl/gifs/amd_powered.gif" alt="powered by amd" />
+			<img src="https://cyber.dabamos.de/88x31/amd_powered.gif" alt="powered by amd" />
 			<img src="https://cyber.dabamos.de/88x31/bestviewed16bit.gif" alt="best viewed 1024x768 16bit color" />
 			<img src="https://cyber.dabamos.de/88x31/button25.gif" alt="pride flag" />
 			<img src="https://cyber.dabamos.de/88x31/archlinux.gif" alt="arch linux" />
