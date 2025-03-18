@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
+	import { version } from '$app/environment';
 	import {
 		AmbientLight,
 		DirectionalLight,
@@ -9,11 +10,13 @@
 		Object3D,
 		PerspectiveCamera,
 		Scene,
-		WebGLRenderer,
+		WebGLRenderer
 	} from 'three';
 	import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 	let { children } = $props();
+
+	let currentTime = $state(new Date());
 
 	let canvas: HTMLCanvasElement;
 	let scene: Scene;
@@ -112,10 +115,16 @@
 
 		animate();
 
+		let timeInterval = setInterval(() => {
+			currentTime = new Date();
+		}, 1000);
+
 		return () => {
 			cancelAnimationFrame(frameId);
 			window.removeEventListener('resize', handleResize);
 			renderer.dispose();
+
+			clearInterval(timeInterval);
 		};
 	});
 </script>
@@ -140,7 +149,20 @@
 
 		{@render children()}
 
-		<div class="mt-4 flex flex-wrap justify-center gap-1.5 **:h-7">
+		<div class="my-4 flex items-center justify-between font-mono text-sm text-neutral-500">
+			<p>
+				{currentTime.toLocaleTimeString('en-GB', {
+					timeZone: 'Europe/London',
+					hour12: false,
+					hour: '2-digit',
+					minute: '2-digit',
+					second: '2-digit'
+				})}
+			</p>
+			<p>{version} [{currentTime.toLocaleDateString('en-GB', {timeZone: 'Europe/London', year: 'numeric'})}]</p>
+		</div>
+
+		<div class="flex flex-wrap justify-center gap-1.5 **:h-7">
 			<img src="https://cyber.dabamos.de/88x31/built_notepad.gif" alt="built with microsoft notepad" />
 			<img src="https://cyber.dabamos.de/88x31/css3.gif" alt="made with cascading style sheets" />
 			<img src="https://cyber.dabamos.de/88x31/amd_powered.gif" alt="powered by amd" />
