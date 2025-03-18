@@ -131,9 +131,10 @@
 
 <canvas class="fixed -z-10" bind:this={canvas}></canvas>
 
-<div class="flex h-screen w-screen flex-col items-center justify-center gap-y-2 px-2 text-neutral-50">
+<div class="flex min-h-screen w-full flex-col items-center justify-start gap-y-2 px-2 text-neutral-50">
+	<div class="my-auto min-h-16"></div>
 	<div
-		class="w-full max-w-xl rounded-tr-xl rounded-bl-xl border border-neutral-300 bg-transparent px-4 py-4 shadow-sm backdrop-blur-xl transition-all sm:px-8"
+		class="w-full max-w-xl rounded-tr-xl rounded-bl-xl border border-neutral-300/8 bg-transparent px-4 py-8 shadow-sm backdrop-blur-xl transition-all sm:px-8"
 	>
 		<div class="flex items-center justify-between">
 			<p class="font-bold transition-all sm:text-xl">Thomas Jowsey</p>
@@ -147,7 +148,9 @@
 
 		<p class="font-mono text-sm text-neutral-300">Programmer and artist <span class="font-emoji">🏴󠁧󠁢󠁥󠁮󠁧󠁿🏴󠁧󠁢󠁳󠁣󠁴󠁿</span>󠁧󠁿</p>
 
-		{@render children()}
+		<div class="my-8">
+			{@render children()}
+		</div>
 
 		<div class="my-4 flex items-center justify-between font-mono text-sm text-neutral-500">
 			<p>
@@ -159,7 +162,7 @@
 					second: '2-digit'
 				})}
 			</p>
-			<p>{version} [{currentTime.toLocaleDateString('en-GB', {timeZone: 'Europe/London', year: 'numeric'})}]</p>
+			<p>{version} 「{currentTime.toLocaleDateString('en-GB', { timeZone: 'Europe/London', year: 'numeric' })}」</p>
 		</div>
 
 		<div class="flex flex-wrap justify-center gap-1.5 **:h-7">
@@ -172,7 +175,10 @@
 			<img src="https://cyber.dabamos.de/88x31/anythingbut.gif" alt="anything but chrome" />
 			<img src="https://cyber.dabamos.de/88x31/chrmevil.gif" alt="google chrome is evil" />
 			<img src="https://cyber.dabamos.de/88x31/cc-by-nc-sa.gif" alt="cc by nc sa" />
-			<a target="_blank" href="https://kahoneki.com/"><img src="/kaho88x31.png" alt="kahoneki" /></a>
+			<a class="shadow-pink-300 transition-shadow hover:shadow" target="_blank" href="https://kahoneki.com/">
+				<img src="/kaho88x31.png" alt="kahoneki" />
+			</a>
 		</div>
 	</div>
+	<div class="my-auto"></div>
 </div>
