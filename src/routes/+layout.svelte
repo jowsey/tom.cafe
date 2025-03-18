@@ -42,7 +42,6 @@
 
 		renderer.setSize(window.innerWidth, window.innerHeight);
 		renderer.setClearColor(0x000000, 1);
-		renderer.setPixelRatio(window.devicePixelRatio);
 
 		const ambientLight = new AmbientLight(0xffffff, 0.5);
 		scene.add(ambientLight);
