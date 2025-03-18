@@ -160,15 +160,9 @@
 		</div>
 
 		<div class="flex flex-wrap justify-center gap-1.5 **:h-7">
-			<img src="https://cyber.dabamos.de/88x31/built_notepad.gif" alt="built with microsoft notepad" />
-			<img src="https://cyber.dabamos.de/88x31/css3.gif" alt="made with cascading style sheets" />
 			<img src="https://cyber.dabamos.de/88x31/amd_powered.gif" alt="powered by amd" />
 			<img src="https://cyber.dabamos.de/88x31/bestviewed16bit.gif" alt="best viewed 1024x768 16bit color" />
-			<img src="https://cyber.dabamos.de/88x31/button25.gif" alt="pride flag" />
-			<img src="https://cyber.dabamos.de/88x31/archlinux.gif" alt="arch linux" />
-			<img src="https://cyber.dabamos.de/88x31/anythingbut.gif" alt="anything but chrome" />
 			<img src="https://cyber.dabamos.de/88x31/chrmevil.gif" alt="google chrome is evil" />
-			<img src="https://cyber.dabamos.de/88x31/cc-by-nc-sa.gif" alt="cc by nc sa" />
 			<a class="shadow-pink-300 transition-shadow hover:shadow" target="_blank" href="https://kahoneki.com/">
 				<img src="/kaho88x31.png" alt="kahoneki" />
 			</a>
