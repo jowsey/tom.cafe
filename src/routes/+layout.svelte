@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import { onMount } from 'svelte';
-	import { version } from '$app/environment';
+	import { version, browser } from '$app/environment';
 	import {
 		AmbientLight,
 		DirectionalLight,
@@ -148,15 +148,21 @@
 
 		<div class="my-4 flex items-center justify-between font-mono text-sm text-neutral-500">
 			<p>
-				{currentTime.toLocaleTimeString('en-GB', {
-					timeZone: 'Europe/London',
-					hour12: false,
-					hour: '2-digit',
-					minute: '2-digit',
-					second: '2-digit'
-				})}
+				{browser
+					? currentTime.toLocaleTimeString('en-GB', {
+							timeZone: 'Europe/London',
+							hour12: false,
+							hour: '2-digit',
+							minute: '2-digit',
+							second: '2-digit'
+						})
+					: '??:??:??'}
 			</p>
-			<p>{version} 「{currentTime.toLocaleDateString('en-GB', { timeZone: 'Europe/London', year: 'numeric' })}」</p>
+			<p>
+				{version} 「{browser
+					? currentTime.toLocaleDateString('en-GB', { timeZone: 'Europe/London', year: 'numeric' })
+					: '????'}」
+			</p>
 		</div>
 
 		<div class="flex flex-wrap justify-center gap-1.5 **:h-7">
