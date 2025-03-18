@@ -24,7 +24,6 @@
 	let renderer: WebGLRenderer;
 	let mainModel: Object3D;
 	let directionalLight: DirectionalLight;
-	let frameId: number;
 
 	onMount(() => {
 		scene = new Scene();
@@ -49,7 +48,6 @@
 		directionalLight = new DirectionalLight(0xffffff, 1);
 		scene.add(directionalLight);
 
-		// const loader = new OBJLoader();
 		const loader = new GLTFLoader();
 		loader.load('/obj/skye2000-form-01.glb', (obj) => {
 			let pbrMaterial = new MeshPhysicalMaterial({
@@ -87,8 +85,6 @@
 
 		let lastTime = performance.now();
 		const animate = () => {
-			frameId = requestAnimationFrame(animate);
-
 			let deltaTime = performance.now() - lastTime;
 			lastTime = performance.now();
 
@@ -112,14 +108,13 @@
 			renderer.render(scene, camera);
 		};
 
-		animate();
+		renderer.setAnimationLoop(animate);
 
 		let timeInterval = setInterval(() => {
 			currentTime = new Date();
 		}, 1000);
 
 		return () => {
-			cancelAnimationFrame(frameId);
 			window.removeEventListener('resize', handleResize);
 			renderer.dispose();
 
@@ -136,7 +131,7 @@
 		class="w-full max-w-xl rounded-tr-xl rounded-bl-xl border border-neutral-300/8 bg-transparent px-4 py-8 shadow-sm backdrop-blur-xl transition-all sm:px-8"
 	>
 		<div class="flex items-center justify-between">
-			<p class="font-bold transition-all sm:text-xl">Thomas Jowsey</p>
+			<p class="font-bold sm:text-xl">Thomas Jowsey</p>
 			<div class="flex gap-x-2 text-sm *:hover:underline sm:gap-x-4">
 				<a target="_blank" href="https://github.com/jowsey">git</a>
 				<a target="_blank" href="https://compiled.itch.io">itch</a>
