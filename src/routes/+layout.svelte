@@ -125,7 +125,7 @@
 
 <canvas class="fixed -z-10" bind:this={canvas}></canvas>
 
-<div class="flex min-h-screen w-full flex-col items-center justify-start gap-y-2 px-2 text-neutral-50">
+<div class="flex min-h-dvh w-full flex-col items-center justify-start gap-y-2 px-2 text-neutral-50">
 	<div class="my-auto min-h-16"></div>
 	<div
 		class="w-full max-w-xl rounded-tr-xl rounded-bl-xl border border-neutral-300/8 bg-transparent px-4 py-8 shadow-sm backdrop-blur-xl transition-all sm:px-8"
