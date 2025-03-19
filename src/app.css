@@ -5,3 +5,8 @@
     --font-mono: "Geist Mono", monospace;
     --font-emoji: 'Noto Color Emoji';
 }
+
+:root {
+    scrollbar-gutter: stable both-edges;
+    scrollbar-width: thin;
+}
