@@ -9,6 +9,7 @@
 		MeshPhysicalMaterial,
 		Object3D,
 		PerspectiveCamera,
+		ReinhardToneMapping,
 		Scene,
 		WebGLRenderer
 	} from 'three';
@@ -17,6 +18,7 @@
 	let { children } = $props();
 
 	let currentTime = $state(new Date());
+	let prefersReducedMotion = $state(false);
 
 	let canvas: HTMLCanvasElement;
 	let scene: Scene;
@@ -26,6 +28,12 @@
 	let directionalLight: DirectionalLight;
 
 	onMount(() => {
+		let prefersReducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+		prefersReducedMotion = prefersReducedMotionQuery.matches;
+
+		const handleMotionPreferenceChange = (e: MediaQueryListEvent) => (prefersReducedMotion = e.matches);
+		prefersReducedMotionQuery.addEventListener('change', handleMotionPreferenceChange);
+
 		scene = new Scene();
 
 		camera = new PerspectiveCamera(90, window.innerWidth / window.innerHeight, 1, 100);
@@ -35,12 +43,15 @@
 		renderer = new WebGLRenderer({
 			canvas,
 			alpha: true,
-			antialias: true,
-			precision: 'highp'
+			antialias: true
 		});
+
+		renderer.toneMapping = ReinhardToneMapping;
+		renderer.toneMappingExposure = 1;
 
 		renderer.setSize(window.innerWidth, window.innerHeight);
 		renderer.setClearColor(0x000000, 1);
+		renderer.setPixelRatio(window.devicePixelRatio);
 
 		const ambientLight = new AmbientLight(0xffffff, 0.5);
 		scene.add(ambientLight);
@@ -88,7 +99,9 @@
 			let deltaTime = performance.now() - lastTime;
 			lastTime = performance.now();
 
-			const time = Date.now() / 10_000;
+			// current date or pre-selected cool-looking frame
+			const time = !prefersReducedMotion ? Date.now() / 10_000 : 34;
+
 			if (mainModel) {
 				mainModel.rotation.y = time * 0.5;
 
@@ -115,9 +128,9 @@
 		}, 1000);
 
 		return () => {
+			prefersReducedMotionQuery.removeEventListener('change', handleMotionPreferenceChange);
 			window.removeEventListener('resize', handleResize);
 			renderer.dispose();
-
 			clearInterval(timeInterval);
 		};
 	});
@@ -127,7 +140,7 @@
 
 <div class="flex min-h-dvh w-full flex-col items-center justify-center gap-y-2 px-2 text-neutral-50">
 	<div
-		class="my-16 w-full max-w-xl rounded-tr-xl rounded-bl-xl border border-neutral-300/8 bg-transparent px-4 py-8 shadow-sm backdrop-blur-xl transition-all sm:px-8"
+		class="my-16 w-full max-w-xl rounded-tr-xl rounded-bl-xl border border-neutral-300/5 bg-transparent px-4 py-8 shadow-sm backdrop-blur-3xl transition-all sm:px-8"
 	>
 		<div class="flex items-center justify-between">
 			<p class="font-bold sm:text-xl">Thomas Jowsey</p>
@@ -172,5 +185,11 @@
 				<img src="/kaho88x31.png" alt="kahoneki" />
 			</a>
 		</div>
+
+		{#if prefersReducedMotion}
+			<p class="mt-4 text-center text-xs text-neutral-500">
+				Background animation has been disabled based on your system-wide motion preferences.
+			</p>
+		{/if}
 	</div>
 </div>
