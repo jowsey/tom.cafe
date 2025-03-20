@@ -148,7 +148,6 @@
 				<a target="_blank" href="https://github.com/jowsey">git</a>
 				<a target="_blank" href="https://compiled.itch.io">itch</a>
 				<a target="_blank" href="https://bsky.app/profile/tom.cafe">bsky</a>
-				<a target="_blank" href="https://linkedin.com/in/jowsey">lnkdn</a>
 			</div>
 		</div>
 
