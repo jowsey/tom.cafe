@@ -176,7 +176,7 @@
 			</p>
 		</div>
 
-		<div class="flex flex-wrap justify-center gap-1.5 **:h-7">
+		<div id="badges" class="flex flex-wrap justify-center gap-1.5 **:h-[31px] select-none">
 			<img src="https://cyber.dabamos.de/88x31/amd_powered.gif" alt="powered by amd" />
 			<img src="https://cyber.dabamos.de/88x31/bestviewed16bit.gif" alt="best viewed 1024x768 16bit color" />
 			<img src="https://cyber.dabamos.de/88x31/chrmevil.gif" alt="google chrome is evil" />
@@ -192,3 +192,9 @@
 		{/if}
 	</div>
 </div>
+
+<style lang="postcss">
+	#badges img {
+			image-rendering: pixelated;
+	}
+</style>
