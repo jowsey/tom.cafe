@@ -14,7 +14,7 @@
 	let { children, title, subtitle, img, imgAlt, publicLink, codeLink }: Props = $props();
 </script>
 
-<div class="mb-4 flex items-start gap-x-4">
+<div class="mb-4 flex items-start gap-4 max-md:flex-col">
 	<img src={img} alt={imgAlt} class="aspect-[630/500] w-48 rounded-lg object-cover" />
 
 	<div class="flex flex-col">

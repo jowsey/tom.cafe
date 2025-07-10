@@ -52,7 +52,7 @@
 		class={{ hidden: portfolioVisible }}
 		onclick={() => {
 			window.scrollTo({
-				top: portfolioTitle.offsetTop - 64,
+				top: portfolioTitle.offsetTop - 56,
 				behavior: 'smooth'
 			});
 		}}
