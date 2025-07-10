@@ -7,11 +7,11 @@
 		subtitle?: string;
 		img: string;
 		imgAlt: string;
-		publicLink?: string;
 		codeLink?: string;
+		itchLink?: string;
 	}
 
-	let { children, title, subtitle, img, imgAlt, publicLink, codeLink }: Props = $props();
+	let { children, title, subtitle, img, imgAlt, codeLink, itchLink }: Props = $props();
 </script>
 
 <div class="mb-4 flex items-start gap-4 max-md:flex-col">
@@ -30,8 +30,11 @@
 		{/if}
 
 		<div class="flex gap-x-2">
-			{#if publicLink}
-				<PortfolioPieceButton href={publicLink}>View Project</PortfolioPieceButton>
+			{#if itchLink}
+				<PortfolioPieceButton href={itchLink}>
+					<img src="/icons/itchdotio.svg" alt="Itch.io logo" class="size-4" />
+					Play on itch.io
+				</PortfolioPieceButton>
 			{/if}
 
 			{#if codeLink}

@@ -6,7 +6,7 @@
 		theme: 'dark' | 'light';
 	}
 
-	let { name, iconPath, colour, theme = 'dark' }: Props = $props();
+	let { name, iconPath, colour, theme }: Props = $props();
 </script>
 
 <div

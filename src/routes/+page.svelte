@@ -70,15 +70,18 @@
 		I also release games under the pseudonym <i>compiledcat</i>.
 	</QuoteBox>
 
-	<p>I'm comfortable working with (non-exhaustive):</p>
+	<p>I'm familiar with (non-exhaustive!):</p>
 	<div class="mt-4 mb-6 flex flex-wrap items-center gap-2">
 		<TechnologyPill name="C++" iconPath="/icons/cplusplus.svg" colour="#00599C" theme="light" />
 		<TechnologyPill name="C#" iconPath="/icons/dotnet.svg" colour="#512BD4" theme="light" />
 		<TechnologyPill name="TypeScript" iconPath="/icons/typescript.svg" colour="#3178C6" theme="light" />
+		<TechnologyPill name="Node.js" iconPath="/icons/nodedotjs.svg" colour="#5FA04E" theme="light" />
 		<TechnologyPill name="Svelte" iconPath="/icons/svelte.svg" colour="#FF3E00" theme="light" />
 		<TechnologyPill name="React" iconPath="/icons/react.svg" colour="#61DAFB" theme="dark" />
 		<TechnologyPill name="Unity" iconPath="/icons/unity.svg" colour="#FFFFFF" theme="dark" />
 		<TechnologyPill name="Linux" iconPath="/icons/linux.svg" colour="#FCC624" theme="dark" />
+		<TechnologyPill name="Git" iconPath="/icons/git.svg" colour="#F05032" theme="light" />
+		...
 	</div>
 </Container>
 
@@ -107,7 +110,8 @@
 </div>
 
 <Container>
-	<p bind:this={portfolioTitle} class="mb-4 text-4xl font-semibold">Portfolio</p>
+	<p bind:this={portfolioTitle} class="text-4xl font-semibold">Portfolio</p>
+	<p class="mb-4 font-serif">Highlights, mainly. You can find everything else on GitHub and Itch (linked above)!</p>
 
 	<PortfolioDate>2025</PortfolioDate>
 	<!-- todo bathtime blitz (january) -->
@@ -122,7 +126,7 @@
 		subtitle="A short incremental web-game about taking over the world with laughter."
 		img="https://img.itch.zone/aW1nLzE0ODI3NTU5LnBuZw==/315x250%23c/%2FLQbw%2B.png"
 		imgAlt="Pixel art of a green and yellow planet with bold yellow text reading &quot;Infectious&quot; on a gray checkered background."
-		publicLink="https://compiled.itch.io/infectious"
+		itchLink="https://compiled.itch.io/infectious"
 	>
 		Web game built in Unity.
 	</PortfolioPiece>
@@ -136,7 +140,7 @@
 		subtitle="An open-world 64-player combat/racing sandbox."
 		img="/portfolio/freeroam/cover.png"
 		imgAlt="Low-poly render of a character wearing blue and pink clothes, standing next to a pink sports car in front of shipping containers. The &quot;freeroam&quot; wordmark can be seen interweaved with objects in the scene."
-		publicLink="https://compiled.itch.io/freeroam"
+		itchLink="https://compiled.itch.io/freeroam"
 		codeLink="https://github.com/jowsey/freeroam"
 	>
 		<p>Sole developer on a Unity project.</p>
@@ -161,7 +165,7 @@
 		subtitle="A procedurally-generated RTS game."
 		img="/portfolio/endovelicus/cover.png"
 		imgAlt="Pixel art of several top-down characters battling on a green field, below bold, medieval-style text reading &quot;Endovelicus Strategy RTS&quot;."
-		publicLink="https://compiled.itch.io/endovelicus"
+		itchLink="https://compiled.itch.io/endovelicus"
 		codeLink="https://github.com/jowsey/endovelicus"
 	>
 		<p>Sole developer on a Unity project.</p>
@@ -177,7 +181,7 @@
 </Container>
 
 <Container>
-	<div id="badges" class="my-4 flex justify-center gap-x-2.5 **:h-[35px]">
+	<div id="badges" class="mt-16 flex justify-center gap-x-2.5 **:h-[35px]">
 		<img src="/88x31/thomasjowsey.png" alt="thomas jowsey 88x31 badge" />
 		<img src="https://cyber.dabamos.de/88x31/bestviewed16bit.gif" alt="best viewed 1024x768 16bit color 88x31 badge" />
 		<img src="https://cyber.dabamos.de/88x31/anybrowser6.gif" alt="best viewed in any browser 88x31 badge" />
@@ -186,10 +190,10 @@
 		</a>
 	</div>
 
-	<div class="mb-4 flex justify-center">
+	<div class="my-4 flex justify-center">
 		<p>
-			Source available on
-			<a class="underline" href="https://github.com/jowsey/tom.cafe">GitHub</a>
+			Source available on <a class="underline" target="_blank" href="https://github.com/jowsey/tom.cafe">GitHub</a>.
+			Thomas Jowsey, {new Date().getFullYear()}. 🐱💗
 		</p>
 	</div>
 </Container>
