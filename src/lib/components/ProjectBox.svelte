@@ -12,7 +12,7 @@
 </script>
 
 <a
-	class="corner-smoothed group w-full rounded-3xl bg-neutral-50 p-2 text-neutral-950 transition-all hover:scale-105"
+	class="corner-smoothed group h-fit w-full rounded-3xl bg-neutral-50 p-2 text-neutral-950 transition-all hover:scale-105"
 	target={href.startsWith('http') ? '_blank' : '_self'}
 	{href}
 >

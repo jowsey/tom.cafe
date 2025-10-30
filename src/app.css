@@ -1,13 +1,26 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
-@theme {
-	--font-sans: 'Inter', sans-serif;
-	/* --font-serif: 'Instrument Serif', serif; */
-}
-
 @layer base {
 	.corner-smoothed {
 		corner-shape: squircle;
 	}
+
+	@keyframes blink {
+		0%,
+		50% {
+			visibility: visible;
+		}
+		51%,
+		100% {
+			visibility: hidden;
+		}
+	}
+}
+
+@theme {
+	--font-sans: 'Inter', sans-serif;
+	/* --font-serif: 'Instrument Serif', serif; */
+
+	--animate-blink: blink 1.2s step-start 0s infinite;
 }
