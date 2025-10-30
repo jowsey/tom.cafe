@@ -2,8 +2,12 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-	--color-brand-light: oklch(96.509% 0.00976 253.021);
-	--color-brand-dark: oklch(45.708% 0.01583 251.78);
-
 	--font-sans: 'Inter', sans-serif;
+	/* --font-serif: 'Instrument Serif', serif; */
+}
+
+@layer base {
+	.corner-smoothed {
+		corner-shape: squircle;
+	}
 }
