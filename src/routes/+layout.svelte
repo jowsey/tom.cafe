@@ -11,7 +11,7 @@
 </svelte:head>
 
 <div
-	class="mx-auto flex min-h-dvh max-w-5xl flex-col border-x border-transparent bg-inherit px-4 py-4 transition-colors duration-300 lg:border-neutral-300"
+	class="mx-auto flex min-h-dvh max-w-5xl flex-col border-x border-transparent bg-inherit px-4 py-4 transition-colors duration-300 lg:border-neutral-500"
 >
 	<p class="px-2 text-3xl font-bold">✦ THOMAS JOWSEY</p>
 	<div class="mt-2 mb-8 h-4 w-full bg-[url('/svg/diagonal-stripes.svg')] bg-contain bg-repeat"></div>
@@ -29,5 +29,11 @@
 			</a>
 		</p>
 		<p class="text-xs text-neutral-500">Engineered by The Jowsey Company of Dundee (me, in my living room)</p>
+
+		<div class="mt-2 flex flex-wrap gap-x-2">
+			<a href="https://kahoneki.com" style="image-rendering: pixelated;" class="">
+				<img src="/88x31/kaho88x31.png" alt="Kahoneki" class="h-[31px] w-auto" />
+			</a>
+		</div>
 	</div>
 </div>

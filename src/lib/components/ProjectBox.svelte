@@ -1,5 +1,7 @@
 <script lang="ts">
-	interface Props {
+	import type { HTMLAnchorAttributes } from 'svelte/elements';
+
+	interface Props extends HTMLAnchorAttributes {
 		title: string;
 		subtitle?: string;
 		imageSrc: string;
@@ -8,13 +10,19 @@
 		linkText: string;
 	}
 
-	let { title, subtitle, imageSrc, imageAlt, href, linkText }: Props = $props();
+	let { title, subtitle, imageSrc, imageAlt, href, linkText, ...attribs }: Props = $props();
 </script>
 
+<!-- eslint-disable svelte/no-navigation-without-resolve -->
+
 <a
-	class="corner-smoothed group h-fit w-full rounded-3xl bg-neutral-50 p-2 text-neutral-950 transition-all hover:scale-105"
+	{...attribs}
 	target={href.startsWith('http') ? '_blank' : '_self'}
 	{href}
+	class={[
+		'corner-smoothed group h-fit w-full rounded-3xl bg-neutral-50 from-orange-200 via-fuchsia-200 to-blue-200 p-2 text-neutral-950 transition-all hover:scale-105 hover:bg-radial-[at_50%_30%]',
+		attribs.class
+	]}
 >
 	<img src={imageSrc} alt={imageAlt} class="corner-smoothed w-full rounded-2xl object-contain" />
 
