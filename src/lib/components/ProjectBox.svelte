@@ -4,13 +4,13 @@
 	interface Props extends HTMLAnchorAttributes {
 		title: string;
 		subtitle?: string;
-		imageSrc: string;
-		imageAlt: string;
+		imgSrc: string;
+		imgAlt: string;
 		href: string;
 		linkText: string;
 	}
 
-	let { title, subtitle, imageSrc, imageAlt, href, linkText, ...attribs }: Props = $props();
+	let { title, subtitle, imgSrc, imgAlt, href, linkText, ...attribs }: Props = $props();
 </script>
 
 <!-- eslint-disable svelte/no-navigation-without-resolve -->
@@ -24,7 +24,7 @@
 		attribs.class
 	]}
 >
-	<img src={imageSrc} alt={imageAlt} class="corner-smoothed w-full rounded-2xl object-contain" />
+	<img src={imgSrc} alt={imgAlt} class="corner-smoothed w-full rounded-2xl object-contain" />
 
 	<div class="p-1 pt-2">
 		<p class="text-lg leading-tight font-bold tracking-tight uppercase">{title}</p>

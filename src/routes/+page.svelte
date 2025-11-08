@@ -35,19 +35,23 @@
 			{@render socialListLink('Bluesky', 'https://bsky.app/profile/tom.cafe')}
 			{@render socialListLink('GitHub', 'https://github.com/jowsey')}
 			{@render socialListLink('LinkedIn', 'https://www.linkedin.com/in/jowsey/')}
+			{@render socialListLink('Itch.io', 'https://compiled.itch.io/')}
+			<li>
+				Discord <span class="ml-1 text-xs opacity-50">@jowsey</span>
+			</li>
 		</ul>
 
-		<p class="mb-2 text-xl font-bold">BLOG</p>
+		<hr class="my-8 border-neutral-500" />
+
+		<p class="mb-4 font-light tracking-widest uppercase">Blog</p>
 		<BlogPostBox
 			title="Web scraping to visualise what Blizzard won't"
-			subtitle="Gathering, tracking and visualising 100 million rows of time-series player data"
+			subtitle="Tracking and visualising millions of rows of live game data"
 			date={new Date('2025-11-07')}
 			href="/blog/overwatch-2-data-tracking"
-			imgSrc="/blog/ow2-hero.png"
+			imgSrc="/blog/OW2_JunoTrial-GameplayTrailer_2.jpg"
 			imgAlt="A graph detailing information about Overwatch 2 heroes."
 		/>
-
-		<hr class="my-8 border-neutral-500" />
 	</div>
 
 	<div class="md:w-74">
@@ -57,8 +61,8 @@
 			<ProjectBox
 				title="Overwatch 2 Data Tracking"
 				subtitle="or: web scraping to visualise what Blizzard won't"
-				imageSrc="/blog/ow2-hero.png"
-				imageAlt="A graph detailing information about Overwatch 2 heroes."
+				imgSrc="/blog/ow2-hero.png"
+				imgAlt="A graph detailing information about Overwatch 2 heroes."
 				href="https://ow2.tom.cafe"
 				linkText="Check it out"
 			/>
@@ -66,8 +70,8 @@
 			<ProjectBox
 				title="httpunk"
 				subtitle="a massively-multiplayer Cyberpunk web game"
-				imageSrc="https://github.com/jowsey/httpunk/raw/main/.github/map-screenshot.png"
-				imageAlt="A screenshot showing flashy, holographic 3D buildings."
+				imgSrc="https://github.com/jowsey/httpunk/raw/main/.github/map-screenshot.png"
+				imgAlt="A screenshot showing flashy, holographic 3D buildings."
 				href="https://github.com/jowsey/httpunk"
 				linkText="View the source"
 			/>
@@ -75,8 +79,8 @@
 			<ProjectBox
 				title="Limit Break Inc."
 				subtitle="an incremental web-game about power"
-				imageSrc="https://github.com/jowsey/limit-break-inc/raw/main/.github/screenshot.png"
-				imageAlt="A screenshot showing a sci-fi-themed purple game interface."
+				imgSrc="https://github.com/jowsey/limit-break-inc/raw/main/.github/screenshot.png"
+				imgAlt="A screenshot showing a sci-fi-themed purple game interface."
 				href="https://github.com/jowsey/limit-break-inc"
 				linkText="View the source"
 			/>
