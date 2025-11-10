@@ -1,7 +1,13 @@
 <script lang="ts">
 	import BlogPostBox from '$lib/components/BlogPostBox.svelte';
 	import ProjectBox from '$lib/components/ProjectBox.svelte';
+
+	let { data } = $props();
 </script>
+
+<svelte:head>
+	<title>Thomas Jowsey</title>
+</svelte:head>
 
 {#snippet socialListLink(title: string, href: string)}
 	<li>
@@ -44,14 +50,18 @@
 		<hr class="my-8 border-neutral-500" />
 
 		<p class="mb-4 font-light tracking-widest uppercase">Blog</p>
-		<BlogPostBox
-			title="Web scraping to visualise what Blizzard won't"
-			subtitle="Tracking and visualising millions of rows of live game data"
-			date={new Date('2025-11-07')}
-			href="/blog/overwatch-2-data-tracking"
-			imgSrc="/blog/OW2_JunoTrial-GameplayTrailer_2.jpg"
-			imgAlt="A graph detailing information about Overwatch 2 heroes."
-		/>
+		<div class="flex flex-col gap-4">
+			{#each data.posts as post (post.slug)}
+				<BlogPostBox
+					title={post.meta.title}
+					subtitle={post.meta.subtitle}
+					date={new Date(post.meta.date)}
+					imgSrc={post.meta.imgSrc}
+					imgAlt={post.meta.imgAlt}
+					slug={post.slug}
+				/>
+			{/each}
+		</div>
 	</div>
 
 	<div class="md:w-74">
@@ -61,7 +71,7 @@
 			<ProjectBox
 				title="Overwatch 2 Data Tracking"
 				subtitle="or: web scraping to visualise what Blizzard won't"
-				imgSrc="/blog/ow2-hero.png"
+				imgSrc="/blog/ow2-hero.webp"
 				imgAlt="A graph detailing information about Overwatch 2 heroes."
 				href="https://ow2.tom.cafe"
 				linkText="Check it out"
@@ -70,7 +80,7 @@
 			<ProjectBox
 				title="httpunk"
 				subtitle="a massively-multiplayer Cyberpunk web game"
-				imgSrc="https://github.com/jowsey/httpunk/raw/main/.github/map-screenshot.png"
+				imgSrc="https://github.com/jowsey/httpunk/raw/main/.github/map-screenshot.webp"
 				imgAlt="A screenshot showing flashy, holographic 3D buildings."
 				href="https://github.com/jowsey/httpunk"
 				linkText="View the source"
@@ -79,7 +89,7 @@
 			<ProjectBox
 				title="Limit Break Inc."
 				subtitle="an incremental web-game about power"
-				imgSrc="https://github.com/jowsey/limit-break-inc/raw/main/.github/screenshot.png"
+				imgSrc="https://github.com/jowsey/limit-break-inc/raw/main/.github/screenshot.webp"
 				imgAlt="A screenshot showing a sci-fi-themed purple game interface."
 				href="https://github.com/jowsey/limit-break-inc"
 				linkText="View the source"

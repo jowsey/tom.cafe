@@ -24,7 +24,7 @@
 		attribs.class
 	]}
 >
-	<img src={imgSrc} alt={imgAlt} class="corner-smoothed w-full rounded-2xl object-contain" />
+	<img src={imgSrc} alt={imgAlt} class="corner-smoothed aspect-video w-full rounded-2xl object-cover" />
 
 	<div class="p-1 pt-2">
 		<p class="text-lg leading-tight font-bold tracking-tight uppercase">{title}</p>
