@@ -25,15 +25,19 @@
 
 <div class="flex flex-col gap-8 md:flex-row">
 	<div class="flex-1 leading-relaxed text-pretty">
-		<div class="mb-8 border-l-4 border-fuchsia-300 pl-4">
-			<p>Hey! I'm Tom, a programmer and designer based in Dundee, Scotland.</p>
-			<p>I mainly work with games and the web—often at the same time!</p>
+		<div class="flex gap-x-4">
+			<img src="/tom.jpeg" alt="It's me" class="mr-0.5 inline aspect-square h-13 rounded-full" />
+			<div class="mb-8 border-l-4 border-orange-300 pl-4">
+				<p>Hey! I'm Tom, a programmer and designer based in Dundee, Scotland.</p>
+				<p>I mainly work with games and the web—often at the same time!</p>
+			</div>
 		</div>
 
 		<p class="mb-8">
-			I'm currently in my third of four years studying at Abertay University—building game engines in C++, for the most
-			part. I'm interested in fast, efficient software, tooling, and more than anything, building stuff that you find
-			cool! We can always do better :-)<span class="animate-blink text-fuchsia-300/75">▄</span>
+			I'm currently in my third of four years studying at Abertay University—building fast, efficient gaming tech with
+			C++. I'm interested in engines, developer tooling, infra, and more than anything, building cool stuff! :-)<span
+				class="animate-blink text-fuchsia-300/75">▄</span
+			>
 		</p>
 
 		<p>Find me elsewhere:</p>
@@ -65,7 +69,7 @@
 	</div>
 
 	<div class="md:w-74">
-		<p class="mb-4 font-light tracking-widest uppercase">Projects</p>
+		<p class="mb-4 font-light tracking-widest uppercase">Things I've Built</p>
 
 		<div class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:flex md:flex-col">
 			<ProjectBox
