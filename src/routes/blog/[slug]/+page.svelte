@@ -2,6 +2,8 @@
 	import { page } from '$app/state';
 
 	let { data } = $props();
+
+	const slug = page.url.pathname.split('/').pop();
 </script>
 
 <svelte:head>
@@ -43,3 +45,15 @@
 	<!-- eslint-disable-next-line svelte/no-at-html-tags -->
 	{@html data.content}
 </div>
+
+<p class="mt-8 flex w-full justify-center text-sm">
+	This post's source can be found on&nbsp;
+	<a
+		href="https://github.com/jowsey/tom.cafe/blob/main/src/posts/{slug}.md"
+		target="_blank"
+		class="underline decoration-dotted hover:italic hover:decoration-fuchsia-300 hover:decoration-wavy"
+	>
+		GitHub
+	</a>
+	.
+</p>
