@@ -31,6 +31,7 @@
 		<p class="text-sm">
 			Source available at <a
 				href="https://github.com/jowsey/tom.cafe"
+				target="_blank"
 				class="underline decoration-dotted hover:italic hover:decoration-fuchsia-300 hover:decoration-wavy"
 			>
 				https://github.com/jowsey/tom.cafe
@@ -39,7 +40,7 @@
 		<p class="text-xs text-neutral-500">Engineered by The Jowsey Company of Dundee (me, in my living room)</p>
 
 		<div class="my-2 flex flex-wrap gap-x-2">
-			<a href="https://kahoneki.com">
+			<a href="https://kahoneki.com" target="_blank">
 				<img
 					src="/88x31/kaho88x31.png"
 					alt="Kahoneki"
