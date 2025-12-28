@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import { DATE_OPTIONS } from '$lib/date';
 
 	interface Props {
 		title: string;
@@ -24,7 +25,7 @@
 			{/if}
 			<!-- gives minimum margin to date -->
 			<div class="h-2"></div>
-			<p class="mt-auto text-sm opacity-50">{date.toLocaleDateString()}</p>
+			<p class="mt-auto text-sm opacity-50">{date.toLocaleDateString(undefined, DATE_OPTIONS)}</p>
 		</div>
 
 		{#if imgSrc}

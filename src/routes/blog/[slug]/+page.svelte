@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { DATE_OPTIONS } from '$lib/date.js';
 
 	let { data } = $props();
 
@@ -29,7 +30,7 @@
 
 <p class="text-3xl font-bold text-pretty">{data.meta.title}</p>
 <p class="text-pretty">{data.meta.subtitle}</p>
-<p class="mt-1 mb-4 text-sm opacity-50">{new Date(data.meta.date).toLocaleDateString()}</p>
+<p class="mt-1 mb-4 text-sm opacity-50">{new Date(data.meta.date).toLocaleDateString(undefined, DATE_OPTIONS)}</p>
 
 {#if data.meta.imgSrc && data.meta.useImageAsBanner}
 	<div class="my-4 w-full">
