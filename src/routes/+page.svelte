@@ -69,13 +69,13 @@
 	</div>
 
 	<div class="md:w-74">
-		<p class="mb-4 font-light tracking-widest uppercase">Things I've Built</p>
+		<p class="mb-4 font-light tracking-widest uppercase">Featured Stuff</p>
 
 		<div class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:flex md:flex-col">
 			<ProjectBox
 				title="Overwatch 2 Data Tracking"
 				subtitle="or: web scraping to visualise what Blizzard won't"
-				imgSrc="/blog/ow2-hero.webp"
+				imgSrc="/blog/ow2-data-tracking/ow2-hero.webp"
 				imgAlt="A graph detailing information about Overwatch 2 heroes."
 				href="https://ow2.tom.cafe"
 				linkText="Check it out"

@@ -2,12 +2,13 @@
 	import '../app.css';
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
+	import Link from '$lib/components/Link.svelte';
 
 	let { children } = $props();
 </script>
 
 <div
-	class="mx-auto flex min-h-dvh max-w-5xl flex-col border-x border-transparent bg-inherit px-4 transition-colors duration-300 lg:border-neutral-500"
+	class="mx-auto flex min-h-dvh max-w-5xl flex-col border-x border-transparent bg-inherit px-4 transition-colors duration-300 lg:border-neutral-700"
 >
 	<a
 		href={resolve('/')}
@@ -29,7 +30,8 @@
 
 		<hr class="mt-8 mb-4 border-neutral-500" />
 		<p class="text-sm">
-			Source available at <a
+			Source available at 
+			<a
 				href="https://github.com/jowsey/tom.cafe"
 				target="_blank"
 				class="underline decoration-dotted hover:italic hover:decoration-fuchsia-300 hover:decoration-wavy"
@@ -39,7 +41,7 @@
 		</p>
 		<p class="text-xs text-neutral-500">Engineered by The Jowsey Company of Dundee (me, in my living room)</p>
 
-		<div class="my-2 flex flex-wrap gap-x-2">
+		<div class="my-3 flex flex-wrap gap-x-2">
 			<a href="https://kahoneki.com" target="_blank">
 				<img
 					src="/88x31/kaho88x31.png"

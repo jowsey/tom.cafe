@@ -20,7 +20,8 @@
 
 @theme {
 	--font-sans: 'Inter', sans-serif;
-	/* --font-serif: 'Instrument Serif', serif; */
+	--font-serif: 'Instrument Serif', serif;
+	--font-mono: 'JetBrains Mono', monospace;
 
 	--animate-blink: blink 1.2s step-start 0s infinite;
 }

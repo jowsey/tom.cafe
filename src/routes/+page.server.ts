@@ -12,5 +12,7 @@ export const load: PageServerLoad = async () => {
 		posts.push({ slug, meta: post.metadata });
 	}
 
+	posts.sort((a, b) => new Date(b.meta.date).getTime() - new Date(a.meta.date).getTime());
+
 	return { posts };
 };
