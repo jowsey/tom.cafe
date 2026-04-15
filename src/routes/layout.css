@@ -2,7 +2,7 @@
 
 @theme {
 	--font-sans: 'Inter', sans-serif;
-	--font-serif: 'Source Serif 4', serif;
+	--font-serif: 'IBM Plex Serif', serif;
 }
 
 @layer base {
