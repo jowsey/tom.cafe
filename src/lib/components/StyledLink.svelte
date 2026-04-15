@@ -20,15 +20,12 @@
 </script>
 
 <!-- eslint-disable svelte/no-navigation-without-resolve -->
-<a
-	{href}
-	target={external ? '_blank' : undefined}
-	class="group flex cursor-pointer items-end justify-between gap-2"
->
+<a {href} target={external ? '_blank' : undefined} class="group flex cursor-pointer items-end justify-between gap-2">
 	<span
 		class="text-cyan-50 underline decoration-zinc-700 decoration-dotted group-hover:italic group-hover:decoration-fuchsia-300 group-hover:decoration-wavy"
 	>
 		{label}
 	</span>
-	<span class="text-right text-sm text-zinc-700 italic">{prettyLink}</span>
+
+	<span class="text-right text-sm text-zinc-700 italic max-lg:hidden">{prettyLink}</span>
 </a>
