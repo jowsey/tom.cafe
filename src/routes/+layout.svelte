@@ -30,7 +30,7 @@
 
 		<hr class="mt-8 mb-4 border-neutral-500" />
 		<p class="text-sm">
-			Source available at 
+			Source available at
 			<a
 				href="https://github.com/jowsey/tom.cafe"
 				target="_blank"
