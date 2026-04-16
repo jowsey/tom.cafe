@@ -27,7 +27,7 @@
 		<SidebarBlock>
 			<div class="flex items-center gap-4 sm:max-lg:flex-col sm:max-lg:items-start">
 				<img src="/me.png" alt="it's me!" class="size-12 rounded-full" />
-				<p class="text-sm">Programmer & generalist based in Dundee, UK.</p>
+				<p class="text-sm text-pretty">Programmer & generalist based in Dundee, UK.</p>
 			</div>
 		</SidebarBlock>
 
