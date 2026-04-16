@@ -3,6 +3,8 @@
 	import MainPageProjectSection from '$lib/components/MainPageProjectSection.svelte';
 </script>
 
+<p class="px-4 pt-6 pb-2 text-3xl font-bold underline decoration-fuchsia-300 decoration-wavy sm:px-8">Projects</p>
+
 <div class="flex w-full flex-col divide-y divide-zinc-700">
 	<MainPageProject
 		title="Loose Juice"
@@ -18,7 +20,7 @@
 		<p>
 			Developed in Unity 6 with team
 			<span class="whitespace-nowrap">Finch Outside the Box 🐦</span> at Abertay University.<br />
-			Core contributor (programmer/generalist) in a team of 7 from concept to release.
+			Programmer and designer in a team of 7 from concept to release.
 		</p>
 
 		<MainPageProjectSection

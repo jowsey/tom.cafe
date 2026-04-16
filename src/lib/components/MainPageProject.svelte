@@ -24,21 +24,21 @@
 		class="flex items-center gap-2 rounded-xl bg-cyan-50 px-3 py-2 text-sm font-semibold text-zinc-950 transition-all hover:bg-fuchsia-50"
 	>
 		{#if type === 'Itch'}
-			<img src="/icons/itchdotio.png" alt="Itch.io" class="inline size-6" />
+			<img src="/icons/itchdotio.png" alt="Itch.io" class="inline size-5" />
 			View on itch.io
 		{:else if type === 'GitHub'}
-			<img src="/icons/github.png" alt="GitHub" class="inline size-6" />
+			<img src="/icons/github.png" alt="GitHub" class="inline size-5" />
 			View source
 		{/if}
 	</a>
 {/snippet}
 
 <div class="@container">
-	<div class="flex w-full gap-8 p-8 @max-5xl:flex-col">
+	<div class="flex w-full gap-8 p-4 text-sm leading-snug text-pretty sm:p-8 sm:text-base @max-5xl:flex-col">
 		{#if images}
 			<div class="flex shrink-0 gap-4 overflow-auto @5xl:flex-col">
 				{#each images as img (img)}
-					<img src={img} alt={title} class="min-w-56 shrink-0 rounded-lg object-cover @max-5xl:h-31.5 @5xl:w-56" />
+					<img src={img} alt={title} class="shrink-0 rounded-lg object-cover @max-5xl:h-31.5 @5xl:w-56 @5xl:min-w-56" />
 				{/each}
 			</div>
 		{/if}
@@ -55,7 +55,7 @@
 			<p class="text-lg text-zinc-300">{subtitle}</p>
 
 			{#if itchLink || githubLink}
-				<div class="mt-4 flex gap-2">
+				<div class="mt-4 flex flex-wrap gap-2">
 					{#if itchLink}
 						{@render externalButton(itchLink, 'Itch')}
 					{/if}
@@ -65,7 +65,7 @@
 				</div>
 			{/if}
 
-			<div class="mt-4 flex max-w-[80ch] flex-col gap-4 leading-snug text-pretty">
+			<div class="mt-4 flex max-w-[80ch] flex-col gap-4">
 				{@render children?.()}
 			</div>
 		</div>

@@ -10,6 +10,7 @@
 
 <svelte:head>
 	<title>Thomas Jowsey</title>
+	<meta name="description" content="Personal website of Thomas Jowsey." />
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
@@ -32,7 +33,7 @@
 		</SidebarBlock>
 
 		<SidebarBlock title="find me online">
-			<ul class="flex-wrap max-sm:flex max-sm:gap-x-6 max-sm:gap-y-2">
+			<ul class="flex-wrap max-sm:flex max-sm:gap-x-4 max-sm:gap-y-2">
 				<li><StyledLink href="https://github.com/jowsey" label="github" /></li>
 				<li><StyledLink href="https://bsky.app/profile/tom.cafe" label="bluesky" /></li>
 				<li><StyledLink href="https://linkedin.com/in/jowsey" label="linkedin" /></li>
