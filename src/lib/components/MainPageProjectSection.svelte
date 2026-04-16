@@ -11,7 +11,7 @@
 </script>
 
 <div>
-	<p class="text-lg font-bold"><span class="mr-2 text-fuchsia-300">❱</span>{title}</p>
+	<p class="text-lg font-bold"><span class="mr-2 text-fuchsia-300 select-none">❱</span>{title}</p>
 	{#if subtitle}
 		<p class="text-sm text-zinc-300 italic">{subtitle}</p>
 	{/if}

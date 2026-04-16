@@ -6,7 +6,7 @@
 	interface Props {
 		title: string;
 		subtitle: string;
-		year?: number;
+		year?: number | [number, number];
 		images?: string[];
 		itchLink?: string;
 		githubLink?: string;
@@ -24,10 +24,10 @@
 		class="flex items-center gap-2 rounded-xl bg-cyan-50 px-3 py-2 text-sm font-semibold text-zinc-950 transition-all hover:bg-fuchsia-50"
 	>
 		{#if type === 'Itch'}
-			<img src="/itchdotio.png" alt="Itch.io" class="inline size-6" />
-			View project
+			<img src="/icons/itchdotio.png" alt="Itch.io" class="inline size-6" />
+			View on itch.io
 		{:else if type === 'GitHub'}
-			<img src="/github.png" alt="GitHub" class="inline size-6" />
+			<img src="/icons/github.png" alt="GitHub" class="inline size-6" />
 			View source
 		{/if}
 	</a>
@@ -38,11 +38,7 @@
 		{#if images}
 			<div class="flex shrink-0 gap-4 overflow-auto @5xl:flex-col">
 				{#each images as img (img)}
-					<img
-						src={img}
-						alt={title}
-						class="aspect-video min-w-56 shrink-0 rounded-lg object-cover @max-5xl:h-31.5 @5xl:w-56"
-					/>
+					<img src={img} alt={title} class="min-w-56 shrink-0 rounded-lg object-cover @max-5xl:h-31.5 @5xl:w-56" />
 				{/each}
 			</div>
 		{/if}
@@ -51,7 +47,9 @@
 			<p class="font-bold">
 				<span class="text-3xl">{title}</span>
 				{#if year}
-					<span class="text-xl text-zinc-700">({year})</span>
+					<span class="text-xl text-zinc-700">
+						({typeof year === 'number' ? year : `${year[0]}–${year[1]}`})
+					</span>
 				{/if}
 			</p>
 			<p class="text-lg text-zinc-300">{subtitle}</p>
@@ -67,7 +65,7 @@
 				</div>
 			{/if}
 
-			<div class="mt-4">
+			<div class="mt-4 flex max-w-[80ch] flex-col gap-4 leading-snug text-pretty">
 				{@render children?.()}
 			</div>
 		</div>
