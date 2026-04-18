@@ -38,7 +38,13 @@
 		{#if images}
 			<div class="flex shrink-0 gap-4 overflow-auto @5xl:flex-col">
 				{#each images as img (img)}
-					<img src={img} alt={title} class="shrink-0 rounded-lg object-cover @max-5xl:h-31.5 @5xl:w-56 @5xl:min-w-56" />
+					<a href={img} target="_blank">
+						<img
+							src={img}
+							alt={title}
+							class="shrink-0 rounded-lg object-cover hover:brightness-115 @max-5xl:h-31.5 @5xl:w-56 @5xl:min-w-56"
+						/>
+					</a>
 				{/each}
 			</div>
 		{/if}

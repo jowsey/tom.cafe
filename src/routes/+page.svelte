@@ -13,8 +13,10 @@
 		itchLink="https://fotb.itch.io/loose-juice"
 		githubLink="https://github.com/jowsey/DES315_FinchOutsideTheBox"
 		images={[
-			'https://img.itch.zone/aW1hZ2UvNDI5OTA1NC8yNjE1NDA0MS5qcGc=/original/JursPs.jpg',
-			'https://img.itch.zone/aW1hZ2UvNDI5OTA1NC8yNjE1NDA1MS5qcGc=/original/J7Jvso.jpg'
+			'/images/loosejuice-menu.png',
+			'/images/loosejuice-pause.png',
+			'/images/loosejuice-caravan.jpg',
+			'/images/loosejuice-cinematic.png'
 		]}
 	>
 		<p>
