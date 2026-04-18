@@ -97,7 +97,7 @@
 
 	<MainPageProject
 		title="BLUESHIFT: Command"
-		subtitle="a space combat game with a custom engine for Windows & PS5"
+		subtitle="a space combat game with a custom engine for PlayStation 5"
 		year={2025}
 		images={['/images/blueshift-menu.png', '/images/blueshift-gameplay.png', '/images/blueshift-options.png']}
 	>
@@ -134,10 +134,9 @@
 
 		<MainPageProjectSection title="UI/UX">
 			<ul class="list-disc">
-				<li>Owned all UI flows, visual design language</li>
 				<li>Built custom node graph and branded design system on top of ImGui</li>
 				<li>Built callback-based PS5 IME wrapper for text input</li>
-				<li>Responsible for iterative polish and consistency passes</li>
+				<li>Owned UI flows, visual design language</li>
 			</ul>
 		</MainPageProjectSection>
 

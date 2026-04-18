@@ -1,18 +1,11 @@
 <script lang="ts">
 	import './layout.css';
-	import favicon from '$lib/assets/favicon.svg';
 	import StyledLink from '$lib/components/StyledLink.svelte';
 	import { resolve } from '$app/paths';
 	import SidebarBlock from '$lib/components/SidebarBlock.svelte';
 
 	let { children } = $props();
 </script>
-
-<svelte:head>
-	<title>Thomas Jowsey</title>
-	<meta name="description" content="Personal website of Thomas Jowsey." />
-	<link rel="icon" href={favicon} />
-</svelte:head>
 
 <div class="flex h-dvh w-dvw max-sm:flex-col">
 	<div
