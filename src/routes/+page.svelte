@@ -13,10 +13,10 @@
 		itchLink="https://fotb.itch.io/loose-juice"
 		githubLink="https://github.com/jowsey/DES315_FinchOutsideTheBox"
 		images={[
-			'/images/loosejuice-menu.png',
-			'/images/loosejuice-pause.png',
 			'/images/loosejuice-caravan.jpg',
-			'/images/loosejuice-cinematic.png'
+			'/images/loosejuice-cinematic.png',
+			'/images/loosejuice-menu.png',
+			'/images/loosejuice-pause.png'
 		]}
 	>
 		<p>
@@ -103,7 +103,7 @@
 	>
 		<p>
 			Developed in an in-house engine with team Overscope Inc. 🏢 at Abertay University. <br />
-			Programmer in a team of 4 from concept to release.
+			Programmer in a team of 4 from concept to completion.
 		</p>
 		<p class="text-sm text-zinc-300 italic">
 			This project's codebase is heavily integrated with the PlayStation 5 SDK, and cannot be shared.

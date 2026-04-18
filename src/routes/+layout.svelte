@@ -5,9 +5,11 @@
 	import SidebarBlock from '$lib/components/SidebarBlock.svelte';
 
 	let { children } = $props();
+
+	let contentContainer: HTMLDivElement;
 </script>
 
-<div class="flex h-dvh w-dvw max-sm:flex-col">
+<div class="flex h-dvh w-full max-sm:flex-col">
 	<div
 		class="flex shrink-0 flex-col divide-y divide-solid divide-zinc-700 border-zinc-700 transition-all max-sm:border-b sm:h-full sm:w-36 sm:border-r lg:w-72"
 	>
@@ -26,17 +28,27 @@
 		</SidebarBlock>
 
 		<SidebarBlock title="find me online">
-			<ul class="flex-wrap max-sm:flex max-sm:gap-x-4 max-sm:gap-y-2">
-				<li><StyledLink href="https://github.com/jowsey" label="github" /></li>
+			<ul class="flex-wrap max-sm:flex max-sm:gap-x-6 max-sm:gap-y-2">
 				<li><StyledLink href="https://bsky.app/profile/tom.cafe" label="bluesky" /></li>
 				<li><StyledLink href="https://linkedin.com/in/jowsey" label="linkedin" /></li>
+				<li><StyledLink href="https://github.com/jowsey" label="github" /></li>
 				<li><StyledLink href="https://jowsey.itch.io" label="itch" /></li>
-				<li><StyledLink href="mailto:tomjowsey@gmail.com" label="e-mail" /></li>
+				<li><StyledLink href="mailto:tomjowsey@gmail.com" label="mail" /></li>
 			</ul>
 		</SidebarBlock>
 	</div>
 
-	<div class="min-h-full grow sm:overflow-auto">
+	<div bind:this={contentContainer} class="min-h-full max-w-7xl grow border-zinc-700 sm:overflow-auto sm:border-r">
 		{@render children()}
+
+		<div class="flex w-full flex-col items-center justify-center pt-8 pb-64 text-sm">
+			<p>🐈</p>
+			<button
+				class="cursor-pointer text-cyan-50 underline decoration-dashed hover:italic hover:decoration-fuchsia-300 hover:decoration-wavy"
+				onclick={() => contentContainer.scrollTo({ top: 0, behavior: 'smooth' })}
+			>
+				to the top!
+			</button>
+		</div>
 	</div>
 </div>
