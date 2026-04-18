@@ -5,8 +5,6 @@
 	import SidebarBlock from '$lib/components/SidebarBlock.svelte';
 
 	let { children } = $props();
-
-	let contentContainer: HTMLDivElement;
 </script>
 
 <div class="flex h-dvh w-full max-sm:flex-col">
@@ -38,17 +36,14 @@
 		</SidebarBlock>
 	</div>
 
-	<div bind:this={contentContainer} class="min-h-full max-w-7xl grow border-zinc-700 sm:overflow-auto sm:border-r">
+	<div class="min-h-full max-w-7xl grow border-zinc-700 sm:overflow-auto sm:border-r">
 		{@render children()}
 
-		<div class="flex w-full flex-col items-center justify-center pt-8 pb-64 text-sm">
+		<div
+			class="flex w-full flex-col items-center justify-center gap-y-2 border-t border-zinc-700 pt-16 pb-64 text-sm text-pretty text-zinc-500"
+		>
+			<p>that's all for now!</p>
 			<p>🐈</p>
-			<button
-				class="cursor-pointer text-cyan-50 underline decoration-dashed hover:italic hover:decoration-fuchsia-300 hover:decoration-wavy"
-				onclick={() => contentContainer.scrollTo({ top: 0, behavior: 'smooth' })}
-			>
-				to the top!
-			</button>
 		</div>
 	</div>
 </div>
