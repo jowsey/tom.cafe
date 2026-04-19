@@ -13,10 +13,10 @@
 		itchLink="https://fotb.itch.io/loose-juice"
 		githubLink="https://github.com/jowsey/DES315_FinchOutsideTheBox"
 		images={[
-			'/images/loosejuice-caravan.jpg',
-			'/images/loosejuice-cinematic.png',
-			'/images/loosejuice-menu.png',
-			'/images/loosejuice-pause.png'
+			'/images/loosejuice-caravan.webp',
+			'/images/loosejuice-cinematic.webp',
+			'/images/loosejuice-menu.webp',
+			'/images/loosejuice-pause.webp'
 		]}
 	>
 		<p>
@@ -99,7 +99,7 @@
 		title="BLUESHIFT: Command"
 		subtitle="a space combat game with a custom engine for PlayStation 5"
 		year={2025}
-		images={['/images/blueshift-menu.png', '/images/blueshift-gameplay.png', '/images/blueshift-options.png']}
+		images={['/images/blueshift-menu.webp', '/images/blueshift-gameplay.webp', '/images/blueshift-options.webp']}
 	>
 		<p>
 			Developed in an in-house engine with team Overscope Inc. 🏢 at Abertay University. <br />
