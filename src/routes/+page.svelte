@@ -166,7 +166,7 @@
 
 	<MainPageProject
 		title="College Projects"
-		subtitle="a collection of game projects built in Unity"
+		subtitle="a collection of solo game projects built in Unity"
 		year={[2021, 2023]}
 		itchLink="https://itch.io/c/3389461/college-projects"
 		images={[
@@ -176,19 +176,22 @@
 			'/images/endovelicus-gameplay.webp'
 		]}
 	>
-		<p>From 2021 to 2023, I built several solo game projects with Unity at Wakefield College.</p>
+		<p>From 2021 to 2023, I built several solo game projects in Unity at Wakefield College.</p>
 
 		<MainPageProjectSection title="freeroam." subtitle="an online multiplayer sandbox game">
 			<ul class="list-disc">
-				<li>Peer-to-peer networking</li>
-				<li>Networked gameplay systems including PvP combat and vehicle physics</li>
-				<li>Data-driven pipeline for vehicles, weapons, attachments, and skins</li>
+				<li>Peer-to-peer networking, lobby browser system</li>
+				<li>
+					Networked gameplay systems including PvP combat, vehicle physics, and customizable characters, weapons, and
+					vehicles
+				</li>
+				<li>Automated tools for adding new vehicles, weapons, attachments, and skins</li>
 			</ul>
 		</MainPageProjectSection>
 
 		<MainPageProjectSection title="Revolt" subtitle="an apocalyptic mage combat game">
 			<ul class="list-disc">
-				<li>Dynamic object pooling system for spells, projectiles, and entities</li>
+				<li>Reduced spawning/destruction overhead with object pooling system for projectiles and entities</li>
 				<li>First-class cross-platform gamepad support</li>
 				<li>Data-driven spell and ability system</li>
 			</ul>
@@ -196,9 +199,9 @@
 
 		<MainPageProjectSection title="Endovelicus" subtitle="a 2D strategy roguelike game">
 			<ul class="list-disc">
-				<li>Procedural hybrid noise & algorithm-based map generation</li>
-				<li>Interweaved gameplay systems; upgrades, abilities, unit classes, buildings</li>
-				<li>Progressive AI opponent that scales with player ability</li>
+				<li>Hybrid procedural noise & algorithmic map generation</li>
+				<li>Extensible ability system built on C# reflection</li>
+				<li>Async tasks for unit behaviour handling</li>
 			</ul>
 		</MainPageProjectSection>
 	</MainPageProject>
