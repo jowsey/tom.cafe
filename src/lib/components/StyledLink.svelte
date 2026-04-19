@@ -22,7 +22,7 @@
 <!-- eslint-disable svelte/no-navigation-without-resolve -->
 <a {href} target={external ? '_blank' : undefined} class="group flex cursor-pointer items-end justify-between gap-2">
 	<span
-		class="text-cyan-50 underline decoration-zinc-700 decoration-dotted transition-all duration-75 group-hover:italic group-hover:decoration-fuchsia-300 group-hover:decoration-wavy group-hover:sm:indent-2.5"
+		class="underline decoration-zinc-700 decoration-wavy transition-all duration-75 group-hover:italic group-hover:decoration-fuchsia-300 group-hover:sm:indent-2.5"
 	>
 		{label}
 	</span>

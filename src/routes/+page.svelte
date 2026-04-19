@@ -5,7 +5,7 @@
 
 <p class="px-4 pt-6 pb-2 text-3xl font-bold underline decoration-fuchsia-300 decoration-wavy sm:px-8">Projects</p>
 
-<div class="flex w-full flex-col divide-y divide-zinc-700">
+<div class="flex w-full flex-col divide-y divide-zinc-900 border-b border-zinc-900">
 	<MainPageProject
 		title="Loose Juice"
 		subtitle="an online physics-based platformer"
