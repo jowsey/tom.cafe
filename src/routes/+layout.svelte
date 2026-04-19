@@ -1,15 +1,15 @@
 <script lang="ts">
 	import './layout.css';
 	import StyledLink from '$lib/components/StyledLink.svelte';
-	import { resolve } from '$app/paths';
 	import SidebarBlock from '$lib/components/SidebarBlock.svelte';
+	import { resolve } from '$app/paths';
 
 	let { children } = $props();
 </script>
 
 <div class="flex h-dvh w-full max-sm:flex-col">
 	<div
-		class="flex shrink-0 flex-col divide-y divide-solid divide-zinc-700 border-zinc-700 transition-all max-sm:border-b sm:h-full sm:w-46 sm:border-r lg:w-70"
+		class="flex shrink-0 flex-col divide-y divide-solid divide-zinc-700 border-zinc-700 transition-all *:last:border-b *:last:border-zinc-700 sm:h-full sm:w-46 sm:border-r lg:w-70"
 	>
 		<a
 			href={resolve('/')}
@@ -21,17 +21,17 @@
 		<SidebarBlock>
 			<div class="flex items-center gap-4 sm:max-lg:flex-col sm:max-lg:items-start">
 				<img src="/favicon.webp" alt="it's me!" class="size-12 rounded-full" />
-				<p class="text-sm">Games programmer <br class="max-lg:hidden" /> based in Dundee, UK.</p>
+				<p class="text-sm text-pretty">Games programmer <br class="max-lg:hidden" /> based in Dundee, UK.</p>
 			</div>
 		</SidebarBlock>
 
-		<SidebarBlock title="find me online">
-			<ul class="flex-wrap max-sm:flex max-sm:gap-x-6 max-sm:gap-y-2">
-				<li><StyledLink href="https://bsky.app/profile/tom.cafe" label="bluesky" /></li>
-				<li><StyledLink href="https://linkedin.com/in/jowsey" label="linkedin" /></li>
-				<li><StyledLink href="https://github.com/jowsey" label="github" /></li>
-				<li><StyledLink href="https://jowsey.itch.io" label="itch" /></li>
-				<li><StyledLink href="mailto:tomjowsey@gmail.com" label="mail" /></li>
+		<SidebarBlock>
+			<ul class="flex-wrap max-sm:flex max-sm:gap-x-4 max-sm:gap-y-2">
+				<li><StyledLink href="https://bsky.app/profile/tom.cafe" label="Bluesky" /></li>
+				<li><StyledLink href="https://linkedin.com/in/jowsey" label="LinkedIn" /></li>
+				<li><StyledLink href="https://github.com/jowsey" label="GitHub" /></li>
+				<li><StyledLink href="https://jowsey.itch.io" label="itch.io" /></li>
+				<li><StyledLink href="mailto:tomjowsey@gmail.com" label="Email" /></li>
 			</ul>
 		</SidebarBlock>
 	</div>
@@ -44,6 +44,8 @@
 		>
 			<p>that's all for now!</p>
 			<p>🐈</p>
+
+			<p class="mt-8 text-xs text-zinc-700">Thomas Jowsey {new Date().getFullYear()} - CC0</p>
 		</div>
 	</div>
 </div>
