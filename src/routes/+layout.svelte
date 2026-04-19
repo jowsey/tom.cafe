@@ -9,7 +9,7 @@
 
 <div class="flex h-dvh w-full max-sm:flex-col">
 	<div
-		class="flex shrink-0 flex-col divide-y divide-solid divide-zinc-700 border-zinc-700 transition-all max-sm:border-b sm:h-full sm:w-36 sm:border-r lg:w-72"
+		class="flex shrink-0 flex-col divide-y divide-solid divide-zinc-700 border-zinc-700 transition-all max-sm:border-b sm:h-full sm:w-46 sm:border-r lg:w-70"
 	>
 		<a
 			href={resolve('/')}
@@ -21,7 +21,7 @@
 		<SidebarBlock>
 			<div class="flex items-center gap-4 sm:max-lg:flex-col sm:max-lg:items-start">
 				<img src="/favicon.webp" alt="it's me!" class="size-12 rounded-full" />
-				<p class="text-sm text-pretty">Programmer & generalist based in Dundee, UK.</p>
+				<p class="text-sm">Games programmer <br class="max-lg:hidden" /> based in Dundee, UK.</p>
 			</div>
 		</SidebarBlock>
 

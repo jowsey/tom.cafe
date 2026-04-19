@@ -21,8 +21,8 @@
 	>
 		<p>
 			Developed in Unity 6 with team
-			<span class="whitespace-nowrap">Finch Outside the Box 🐦</span> at Abertay University.<br />
-			Programmer and designer in a team of 7 from concept to release.
+			<span class="whitespace-nowrap">Finch Outside the Box</span> at Abertay University.<br />
+			Programmer in a team of 7 from concept to release.
 		</p>
 
 		<MainPageProjectSection
@@ -81,18 +81,16 @@
 			subtitle="Designed and implemented our UI/UX, design language, and user flows, working closely with artists"
 		>
 			<ul class="list-disc">
-				<li>Owned UI flows, including main menu, lobby browser, pause menu, settings menu, and in-game HUD</li>
+				<li>Designed UI flows, including main menu, lobby browser, pause menu, settings menu, and in-game HUD</li>
 				<li>Implemented UI motion design in C# with modifiable Unity components</li>
 				<li>Spearheaded our visual design language and brand alongside art team</li>
 			</ul>
 		</MainPageProjectSection>
 
-		<MainPageProjectSection title="Release management" subtitle="Managed our release process and messaging">
-			<ul class="list-disc">
-				<li>Designed release graphics and wrote release notes</li>
-				<li>Owned brand voice and messaging</li>
-			</ul>
-		</MainPageProjectSection>
+		<p>
+			Beyond my core responsibilities, I also led our brand voice, messaging, and release management, designing release
+			graphics, and writing release notes.
+		</p>
 	</MainPageProject>
 
 	<MainPageProject
@@ -102,7 +100,8 @@
 		images={['/images/blueshift-menu.webp', '/images/blueshift-gameplay.webp', '/images/blueshift-options.webp']}
 	>
 		<p>
-			Developed in an in-house engine with team Overscope Inc. 🏢 at Abertay University. <br />
+			Developed in an in-house engine with team <span class="whitespace-nowrap">Overscope Inc.</span> at Abertay
+			University. <br />
 			Programmer in a team of 4 from concept to completion.
 		</p>
 		<p class="text-sm text-zinc-300 italic">
@@ -111,7 +110,7 @@
 
 		<MainPageProjectSection
 			title="Project features"
-			subtitle="Worked in a highly-technical, performance-focused cross-platform C++ codebase"
+			subtitle="Worked in a performance-focused C++ codebase encompassing:"
 		>
 			<ul class="list-disc">
 				<li>Data-oriented ECS architecture</li>
@@ -119,6 +118,21 @@
 				<li>Multi-threaded physics integration with Jolt</li>
 				<li>Custom render pipeline with post-processing and lighting</li>
 				<li>Cross-platform OS abstraction layer for Windows and PS5</li>
+			</ul>
+		</MainPageProjectSection>
+
+		<MainPageProjectSection
+			title="Performance and optimization"
+			subtitle="Continued effort to ensure stable frame times on PS5 architecture"
+		>
+			<ul class="list-disc">
+				<li>Resolved performance bottlenecks using PS5 profiling tools to maintain stable 60fps</li>
+				<li>Empirically tweaked PS5 threading and memory configuration</li>
+				<li>Cut ~100ms of overhead from repeated asset loads by caching filesystem methods</li>
+				<li>
+					Increased max stable entity count from ~150 to thousands by refactoring our broadphase layers and integrating
+					multi-threading into the engine loop
+				</li>
 			</ul>
 		</MainPageProjectSection>
 
@@ -136,29 +150,16 @@
 			<ul class="list-disc">
 				<li>Built custom node graph and branded design system on top of ImGui</li>
 				<li>Built callback-based PS5 IME wrapper for text input</li>
-				<li>Owned UI flows, visual design language</li>
-			</ul>
-		</MainPageProjectSection>
-
-		<MainPageProjectSection
-			title="Performance and optimization"
-			subtitle="Continued effort to ensure stable performance on PS5 architecture"
-		>
-			<ul class="list-disc">
-				<li>Heavily profiled performance bottlenecks using PS5 profiling tools</li>
-				<li>Empirically tweaked PS5 threading and memory configuration</li>
-				<li>Reduced initial loading times by adding a caching layer to asset path verification</li>
-				<li>
-					Drastically improved physics performance by implementing custom broadphase layers and integrating
-					multi-threading into the engine loop
-				</li>
 			</ul>
 		</MainPageProjectSection>
 
 		<MainPageProjectSection title="Build system">
 			<ul class="list-disc">
-				<li>Resolved flaky cross-platform builds</li>
-				<li>Reduced PS5 iteration times by introducing a cache layer for processed assets</li>
+				<li>Simplified our build processes to resolve flaky cross-platform builds</li>
+				<li>
+					Cut PS5 iteration times from several minutes to seconds by refactoring asset conversion to avoid unnecessary
+					work
+				</li>
 			</ul>
 		</MainPageProjectSection>
 	</MainPageProject>
@@ -169,9 +170,10 @@
 		year={[2021, 2023]}
 		itchLink="https://itch.io/c/3389461/college-projects"
 		images={[
-			'https://img.itch.zone/aW1hZ2UvMTk3MDkwNC8xMjI1NTAxOC5wbmc=/original/Pmf5Y3.png',
-			'https://img.itch.zone/aW1hZ2UvMTQ2MDkyNi84OTk4MDE3LnBuZw==/original/EIblxB.png',
-			'https://img.itch.zone/aW1hZ2UvMTkwMzYxMi8xMTI4MjAzMC5wbmc=/original/%2FG1L6n.png'
+			'/images/freeroam-gameplay.webp',
+			'/images/revolt-gameplay.webp',
+			'/images/endovelicus-menu.webp',
+			'/images/endovelicus-gameplay.webp'
 		]}
 	>
 		<p>From 2021 to 2023, I built several solo game projects with Unity at Wakefield College.</p>

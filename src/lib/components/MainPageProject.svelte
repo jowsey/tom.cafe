@@ -17,7 +17,7 @@
 	let { title, subtitle, year, images, itchLink, githubLink, children }: Props = $props();
 
 	const collapsedHeight = 704;
-	const transitionPxPerSecond = 600;
+	const transitionPxPerSecond = 750;
 
 	let contentHeight = $state(Infinity);
 	let expanded = $state(false);
@@ -66,7 +66,7 @@
 	<div
 		bind:clientHeight={contentHeight}
 		class={[
-			'flex w-full gap-8 p-4 text-sm leading-snug text-pretty sm:p-8 sm:text-base @max-5xl:flex-col',
+			'flex w-full gap-8 p-4 text-sm leading-snug text-pretty sm:p-8 lg:text-base @max-5xl:flex-col',
 			{ 'pb-16!': needsExpandButton && browser }
 		]}
 	>

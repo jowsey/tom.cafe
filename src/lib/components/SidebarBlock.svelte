@@ -17,7 +17,7 @@
 	</p>
 
 	{#if title}
-		<p class="pb-2 font-serif text-fuchsia-100 italic">{title}</p>
+		<p class="pb-2 pl-0.5 font-serif text-fuchsia-100 italic">{title}</p>
 	{/if}
 
 	{@render children?.()}
