@@ -7,8 +7,10 @@
 	let { children } = $props();
 </script>
 
-<div class="flex h-dvh w-full max-sm:flex-col">
-	<div class="flex shrink-0 flex-col gap-2 p-2 transition-all sm:h-full sm:w-46 lg:w-70 lg:p-4">
+<div class="flex w-full max-sm:flex-col sm:justify-center">
+	<div
+		class="flex shrink-0 flex-col gap-2 overflow-y-auto p-2 transition-all sm:sticky sm:top-0 sm:h-dvh sm:w-46 lg:w-70 lg:p-4"
+	>
 		<a
 			href={resolve('/')}
 			class="rounded-xl p-4 text-2xl font-bold text-cyan-50 transition-all hover:bg-zinc-50/2 hover:font-extrabold hover:text-fuchsia-100 active:bg-zinc-50/4 lg:py-6 lg:text-5xl"
@@ -34,7 +36,7 @@
 		</SidebarBlock>
 	</div>
 
-	<div class="min-h-full max-w-7xl grow border-zinc-900 sm:overflow-auto sm:border-r">
+	<div class="min-h-full max-w-6xl grow">
 		{@render children()}
 
 		<div class="flex w-full flex-col items-center justify-center gap-y-2 pt-16 pb-64 text-sm text-pretty text-zinc-500">
