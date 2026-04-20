@@ -2,9 +2,23 @@
 	import { browser } from '$app/environment';
 	import type { Snippet } from 'svelte';
 
-	type ExternalLinkType = 'Itch' | 'GitHub';
+	type ExternalLinkType = 'Direct' | 'Itch' | 'GitHub';
 
-	type Skill = 'ai' | 'audio' | 'c++' | 'c#' | 'ps5' | 'networking' | 'tooling' | 'ui/ux' | 'unity' | 'web';
+	type Skill =
+		| 'ai'
+		| 'audio'
+		| 'c++'
+		| 'c#'
+		| 'ps5'
+		| 'networking'
+		| 'node.js'
+		| 'postgresql'
+		| 'svelte'
+		| 'tooling'
+		| 'typescript'
+		| 'ui/ux'
+		| 'unity'
+		| 'web';
 
 	const skillMeta: Record<Skill, { name: string; icon?: string }> = {
 		ps5: { name: 'PS5', icon: 'playstation' },
@@ -12,9 +26,13 @@
 		'c++': { name: 'C++' },
 		'c#': { name: 'C#' },
 		networking: { name: 'Networking', icon: 'network' },
-		tooling: { name: 'Tools', icon: 'nut' },
 		audio: { name: 'Audio/DSP', icon: 'waveform' },
+		tooling: { name: 'Tools', icon: 'nut' },
 		web: { name: 'Web', icon: 'browser' },
+		postgresql: { name: 'PostgreSQL', icon: 'postgresql' },
+		typescript: { name: 'TypeScript', icon: 'typescript' },
+		'node.js': { name: 'Node.js', icon: 'nodedotjs' },
+		svelte: { name: 'Svelte', icon: 'svelte' },
 		'ui/ux': { name: 'UI/UX', icon: 'layout' },
 		ai: { name: 'AI', icon: 'ghost' }
 	} as const;
@@ -24,13 +42,14 @@
 		subtitle: string;
 		year?: number | [number, number];
 		images?: string[];
+		link?: string;
 		itchLink?: string;
 		githubLink?: string;
 		skills?: Skill[];
 		children?: Snippet;
 	}
 
-	let { title, subtitle, year, images, itchLink, githubLink, skills, children }: Props = $props();
+	let { title, subtitle, year, images, link, itchLink, githubLink, skills, children }: Props = $props();
 
 	const collapsedHeight = 704;
 	const transitionPxPerSecond = 750;
@@ -49,7 +68,9 @@
 		target="_blank"
 		class="flex items-center gap-2 rounded-xl bg-cyan-50 px-3 py-2 text-sm font-semibold text-zinc-950 transition-all hover:bg-fuchsia-50"
 	>
-		{#if type === 'Itch'}
+		{#if type === 'Direct'}
+			View project
+		{:else if type === 'Itch'}
 			<img src="/icons/itchdotio.png" alt="Itch.io" class="inline size-5" />
 			View on itch.io
 		{:else if type === 'GitHub'}
@@ -111,8 +132,11 @@
 			</p>
 			<p class="text-lg text-zinc-300">{subtitle}</p>
 
-			{#if itchLink || githubLink}
+			{#if link || itchLink || githubLink}
 				<div class="mt-4 flex flex-wrap gap-2">
+					{#if link}
+						{@render externalButton(link, 'Direct')}
+					{/if}
 					{#if itchLink}
 						{@render externalButton(itchLink, 'Itch')}
 					{/if}

@@ -167,6 +167,42 @@
 	</MainPageProject>
 
 	<MainPageProject
+		title="Overwatch 2 Data Tracker"
+		subtitle="a web app for tracking historical Overwatch 2 game data"
+		year={2025}
+		link="https://ow2.tom.cafe"
+		githubLink="https://github.com/jowsey/ow2-data-frontend"
+		images={['/images/ow2-listing.webp', '/images/ow2-chart.webp']}
+		skills={['tooling', 'web', 'postgresql', 'typescript', 'node.js', 'svelte', 'ui/ux']}
+	>
+		<p>
+			A data visualization app providing players with the tools to analyze and compare data direct from Blizzard.
+			Maintained throughout Overwatch 2 Season 18, building a searchable historical dataset of millions of rows.
+		</p>
+
+		<MainPageProjectSection title="Backend data collection">
+			<ul class="list-disc">
+				<li>
+					Bun <span class="text-xs">(like Node.js)</span> service running a cron job to periodically process snapshots of
+					Blizzard's realtime API
+				</li>
+				<li>Runs as a systemd service on a Linux machine to minimize downtime</li>
+				<li>Saves to a PostgreSQL database running locally via Docker</li>
+				<li>Both app and backend interface with database using Drizzle ORM</li>
+			</ul>
+		</MainPageProjectSection>
+
+		<MainPageProjectSection title="Frontend web-app">
+			<ul class="list-disc">
+				<li>Responsive full-stack SvelteKit app</li>
+				<li>Custom filterable charts using Chart.js</li>
+				<li>REST API with filters for data exploration</li>
+				<li>Reactive filtering and search, no page reloads</li>
+			</ul>
+		</MainPageProjectSection>
+	</MainPageProject>
+
+	<MainPageProject
 		title="College Projects"
 		subtitle="a collection of solo game projects built in Unity"
 		year={[2021, 2023]}
