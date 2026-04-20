@@ -18,6 +18,7 @@
 			'/images/loosejuice-menu.webp',
 			'/images/loosejuice-pause.webp'
 		]}
+		skills={['unity', 'c#', 'networking', 'tooling', 'audio', 'ui/ux']}
 	>
 		<p>
 			Developed in Unity 6 with team
@@ -98,6 +99,7 @@
 		subtitle="a space combat game with a custom engine for PlayStation 5"
 		year={2025}
 		images={['/images/blueshift-menu.webp', '/images/blueshift-gameplay.webp', '/images/blueshift-options.webp']}
+		skills={['ps5', 'c++', 'networking', 'tooling', 'ui/ux', 'ai']}
 	>
 		<p>
 			Developed in an in-house engine with team <span class="whitespace-nowrap">Overscope Inc.</span> at Abertay
@@ -175,6 +177,7 @@
 			'/images/endovelicus-menu.webp',
 			'/images/endovelicus-gameplay.webp'
 		]}
+		skills={['unity', 'c#', 'networking', 'ui/ux', 'ai']}
 	>
 		<p>From 2021 to 2023, I built several solo game projects in Unity at Wakefield College.</p>
 

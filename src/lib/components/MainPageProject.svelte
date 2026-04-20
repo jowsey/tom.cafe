@@ -4,6 +4,21 @@
 
 	type ExternalLinkType = 'Itch' | 'GitHub';
 
+	type Skill = 'ai' | 'audio' | 'c++' | 'c#' | 'ps5' | 'networking' | 'tooling' | 'ui/ux' | 'unity' | 'web';
+
+	const skillMeta: Record<Skill, { name: string; icon?: string }> = {
+		ps5: { name: 'PS5', icon: 'playstation' },
+		unity: { name: 'Unity', icon: 'unity' },
+		'c++': { name: 'C++' },
+		'c#': { name: 'C#' },
+		networking: { name: 'Networking', icon: 'network' },
+		tooling: { name: 'Tools', icon: 'nut' },
+		audio: { name: 'Audio/DSP', icon: 'waveform' },
+		web: { name: 'Web', icon: 'browser' },
+		'ui/ux': { name: 'UI/UX', icon: 'layout' },
+		ai: { name: 'AI', icon: 'ghost' }
+	} as const;
+
 	interface Props {
 		title: string;
 		subtitle: string;
@@ -11,10 +26,11 @@
 		images?: string[];
 		itchLink?: string;
 		githubLink?: string;
+		skills?: Skill[];
 		children?: Snippet;
 	}
 
-	let { title, subtitle, year, images, itchLink, githubLink, children }: Props = $props();
+	let { title, subtitle, year, images, itchLink, githubLink, skills, children }: Props = $props();
 
 	const collapsedHeight = 704;
 	const transitionPxPerSecond = 750;
@@ -103,6 +119,20 @@
 					{#if githubLink}
 						{@render externalButton(githubLink, 'GitHub')}
 					{/if}
+				</div>
+			{/if}
+
+			{#if skills}
+				<div class="mt-4 flex flex-wrap gap-2">
+					{#each skills as skill (skill)}
+						{@const meta = skillMeta[skill]}
+						<div class="flex items-center gap-2 rounded-md bg-zinc-900 px-3 py-1 text-sm font-bold">
+							{#if meta.icon}
+								<img src="/icons/{meta.icon}.png" alt={meta.name} class="inline size-4 invert" />
+							{/if}
+							{meta.name}
+						</div>
+					{/each}
 				</div>
 			{/if}
 
