@@ -13,10 +13,10 @@
 		itchLink="https://fotb.itch.io/loose-juice"
 		githubLink="https://github.com/jowsey/DES315_FinchOutsideTheBox"
 		images={[
-			'/images/loosejuice-caravan.webp',
-			'/images/loosejuice-cinematic.webp',
 			'/images/loosejuice-menu.webp',
-			'/images/loosejuice-pause.webp'
+			'/images/loosejuice-pause.webp',
+			'/images/loosejuice-caravan.webp',
+			'/images/loosejuice-cinematic.webp'
 		]}
 		skills={['unity', 'c#', 'networking', 'tooling', 'audio', 'ui/ux']}
 	>
