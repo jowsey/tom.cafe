@@ -3,7 +3,9 @@
 	import MainPageProjectSection from '$lib/components/MainPageProjectSection.svelte';
 </script>
 
-<p class="px-4 pt-6 pb-2 text-3xl font-bold underline decoration-fuchsia-300 decoration-wavy sm:px-8">Projects</p>
+<p class="px-4 pt-6 pb-2 text-3xl font-bold underline decoration-fuchsia-300 decoration-wavy sm:px-8 lg:pt-10">
+	Projects
+</p>
 
 <div class="flex w-full flex-col divide-y divide-zinc-900 border-b border-zinc-900">
 	<MainPageProject
