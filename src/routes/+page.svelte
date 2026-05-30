@@ -1,11 +1,10 @@
 <script lang="ts">
 	import MainPageProject from '$lib/components/MainPageProject.svelte';
 	import MainPageProjectSection from '$lib/components/MainPageProjectSection.svelte';
+	import Title from '$lib/components/Title.svelte';
 </script>
 
-<p class="px-4 pt-6 pb-2 text-3xl font-bold underline decoration-fuchsia-300 decoration-wavy sm:px-8 lg:pt-10">
-	Projects
-</p>
+<Title title="Projects" />
 
 <div class="flex w-full flex-col divide-y divide-zinc-900 border-b border-zinc-900">
 	<MainPageProject

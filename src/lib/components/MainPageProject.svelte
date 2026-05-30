@@ -84,6 +84,7 @@
 	style="max-height: {expanded ? contentHeight : collapsedHeight}px; transition-duration: {transitionDuration}s;"
 	class="@container relative overflow-hidden transition-[max-height]"
 >
+	<!-- Expansion overlay button -->
 	{#if needsExpandButton}
 		<div
 			class={[
@@ -107,6 +108,7 @@
 			{ 'pb-16!': needsExpandButton && browser }
 		]}
 	>
+		<!-- Image list -->
 		{#if images}
 			<div class="flex shrink-0 gap-4 overflow-auto @5xl:flex-col">
 				{#each images as img (img)}
@@ -122,6 +124,7 @@
 		{/if}
 
 		<div>
+			<!-- Title / subtitle / year -->
 			<p class="font-bold">
 				<span class="text-3xl">{title}</span>
 				{#if year}
@@ -132,6 +135,7 @@
 			</p>
 			<p class="text-lg text-zinc-300">{subtitle}</p>
 
+			<!-- External links -->
 			{#if link || itchLink || githubLink}
 				<div class="mt-4 flex flex-wrap gap-2">
 					{#if link}
@@ -146,6 +150,7 @@
 				</div>
 			{/if}
 
+			<!-- Skills list -->
 			{#if skills}
 				<div class="mt-4 flex flex-wrap gap-2">
 					{#each skills as skill (skill)}
@@ -160,6 +165,7 @@
 				</div>
 			{/if}
 
+			<!-- Project details -->
 			<div class="mt-4 flex max-w-[80ch] flex-col gap-4">
 				{@render children?.()}
 			</div>
