@@ -94,6 +94,8 @@
 			Beyond my core responsibilities, I also led our brand voice, messaging, and release management, designing release
 			graphics, and writing release notes.
 		</p>
+
+		<p>Our team used JIRA and Confluence extensively for project tracking, and practiced agile methodologies.</p>
 	</MainPageProject>
 
 	<MainPageProject
