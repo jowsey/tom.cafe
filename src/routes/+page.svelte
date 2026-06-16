@@ -231,7 +231,7 @@
 			</ul>
 		</MainPageProjectSection>
 
-		<MainPageProjectSection title="Revolt" subtitle="an apocalyptic mage combat game">
+		<MainPageProjectSection title="Revolt" subtitle="a magical horde combat game">
 			<ul class="list-disc">
 				<li>Reduced spawning/destruction overhead with object pooling system for projectiles and entities</li>
 				<li>First-class cross-platform gamepad support</li>

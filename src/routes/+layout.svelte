@@ -42,8 +42,6 @@
 		<div class="flex w-full flex-col items-center justify-center gap-y-2 pt-16 pb-64 text-sm text-pretty text-zinc-500">
 			<p>that's all for now!</p>
 			<p>🐈</p>
-
-			<p class="mt-8 text-xs text-zinc-700">Thomas Jowsey {new Date().getFullYear()} - CC0</p>
 		</div>
 	</div>
 </div>
