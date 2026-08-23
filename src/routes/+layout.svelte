@@ -41,6 +41,17 @@
 
 		<div class="flex w-full flex-col items-center justify-center gap-y-2 pt-16 pb-64 text-sm text-pretty text-zinc-500">
 			<p>that's all for now!</p>
+
+			<p>
+				This website's source is available on <a
+					href="https://github.com/jowsey/tom.cafe/"
+					target="_blank"
+					class="text-zinc-400 underline decoration-zinc-600 decoration-wavy hover:italic hover:decoration-fuchsia-300"
+				>
+					GitHub
+				</a>
+			</p>
+
 			<p>🐈</p>
 		</div>
 	</div>
