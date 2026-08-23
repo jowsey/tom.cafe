@@ -1,12 +1,14 @@
 <script lang="ts">
 	import MainPageProject from '$lib/components/MainPageProject.svelte';
 	import MainPageProjectSection from '$lib/components/MainPageProjectSection.svelte';
-	import Title from '$lib/components/Title.svelte';
+	import Page from '$lib/components/Page.svelte';
 </script>
 
-<Title title="Projects" />
+<svelte:head>
+	<title>Portfolio • Thomas Jowsey</title>
+</svelte:head>
 
-<div class="flex w-full flex-col divide-y divide-zinc-900 border-b border-zinc-900">
+<Page title="Portfolio">
 	<MainPageProject
 		title="Loose Juice"
 		subtitle="an online physics-based platformer"
@@ -247,4 +249,4 @@
 			</ul>
 		</MainPageProjectSection>
 	</MainPageProject>
-</div>
+</Page>

@@ -82,7 +82,7 @@
 
 <div
 	style="max-height: {expanded ? contentHeight : collapsedHeight}px; transition-duration: {transitionDuration}s;"
-	class="@container relative overflow-hidden transition-[max-height]"
+	class="@container relative overflow-hidden border-b border-zinc-900 transition-[max-height]"
 >
 	<!-- Expansion overlay button -->
 	{#if needsExpandButton}

@@ -21,12 +21,18 @@
 		<SidebarBlock>
 			<div class="flex items-center gap-x-4 gap-y-2 sm:max-lg:flex-col sm:max-lg:items-start">
 				<img src="/favicon.webp" alt="it's me!" class="size-12 rounded-full" />
-				<p class="text-sm text-pretty">Games programmer <br class="max-lg:hidden" /> based in Dundee, UK.</p>
+				<p class="text-sm text-pretty">
+					Games programmer <br class="max-lg:hidden" /> based in Dundee, UK.<br />
+					<a
+						class="text-fuchsia-300 underline decoration-zinc-700 decoration-dashed hover:brightness-125"
+						href={resolve('/about')}>About me & hiring ↗</a
+					>
+				</p>
 			</div>
 		</SidebarBlock>
 
 		<SidebarBlock>
-			<ul class="flex-wrap max-sm:flex max-sm:gap-x-2.5 max-sm:gap-y-2">
+			<ul class="flex-wrap gap-2 max-sm:flex">
 				<li><StyledLink href="https://bsky.app/profile/tom.cafe" label="Bluesky" /></li>
 				<li><StyledLink href="https://linkedin.com/in/jowsey" label="LinkedIn" /></li>
 				<li><StyledLink href="https://github.com/jowsey" label="GitHub" /></li>

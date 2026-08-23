@@ -9,7 +9,7 @@
 
 <p
 	class={[
-		'px-4 pt-6 pb-4 text-3xl font-bold underline decoration-fuchsia-300 decoration-wavy sm:px-8 lg:pt-10',
+		'px-4 pt-6 pb-4 text-3xl font-bold underline decoration-fuchsia-300 decoration-wavy decoration-2 sm:px-8 lg:pt-10',
 		className
 	]}
 >
