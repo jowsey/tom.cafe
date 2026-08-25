@@ -25,8 +25,10 @@
 					Games programmer <br class="max-lg:hidden" /> based in Dundee, UK.<br />
 					<a
 						class="text-fuchsia-300 underline decoration-zinc-700 decoration-dashed hover:brightness-125"
-						href={resolve('/about')}>About me & hiring ↗</a
+						href={resolve('/about')}
 					>
+						About me & hiring ↗
+					</a>
 				</p>
 			</div>
 		</SidebarBlock>

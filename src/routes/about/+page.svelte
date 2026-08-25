@@ -17,8 +17,10 @@
 			Hey! I'm Tom
 			<span
 				class="ml-0.5 rounded-md bg-zinc-800 px-2 py-1 align-middle text-xs outline -outline-offset-1 outline-zinc-700"
-				>he/him</span
-			>, a {@render topic('games systems programmer')} and {@render topic('full-stack web developer')} based in Dundee, UK.
+			>
+				he/him
+			</span>
+			, a {@render topic('games systems programmer')} and {@render topic('full-stack web developer')} based in Dundee, UK.
 		</p>
 		<br />
 		<p>
@@ -27,8 +29,10 @@
 			<a
 				href="https://linkedin.com/in/jowsey"
 				target="_blank"
-				class="underline decoration-zinc-500 decoration-wavy hover:italic hover:decoration-fuchsia-300">get in touch</a
-			>!
+				class="underline decoration-zinc-500 decoration-wavy hover:italic hover:decoration-fuchsia-300"
+			>
+				get in touch
+			</a>!
 		</p>
 		<br />
 		<p>
