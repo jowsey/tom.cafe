@@ -42,8 +42,8 @@
 		</p>
 		<br />
 		<p>
-			I recently participated in {@render topic('DARE Academy 2026')} as a finalist with team
-			<span class="whitespace-nowrap">Finch Outside the Box</span>.
+			I recently participated in {@render topic('DARE Academy 2026')} with team Finch&nbsp;Outside&nbsp;the&nbsp;Box (Loose&nbsp;Juice),
+			winning the competition as well as the Audience Choice award!
 		</p>
 		<br />
 		<StyledLink href="/" label="View my portfolio ↗" />

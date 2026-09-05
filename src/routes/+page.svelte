@@ -29,6 +29,15 @@
 			Programmer in a team of 7 from concept to release.
 		</p>
 
+		<!-- todo update with link to official article or post or something -->
+		<a
+			href="https://linkedin.com/in/jowsey"
+			target="_blank"
+			class="text-xl underline decoration-zinc-700 decoration-wavy hover:decoration-fuchsia-300"
+		>
+			<span class="font-semibold">🎉 New!</span> Loose Juice wins DARE Academy 2026 & Audience Choice awards!
+		</a>
+
 		<MainPageProjectSection
 			title="Native voice chat pipeline"
 			subtitle="Designed and implemented our custom voice chat solution"
