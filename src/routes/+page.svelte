@@ -29,9 +29,8 @@
 			Programmer in a team of 7 from concept to release.
 		</p>
 
-		<!-- todo update with link to official article or post or something -->
 		<a
-			href="https://linkedin.com/in/jowsey"
+			href="https://fotb.itch.io/loose-juice/devlog/1653682/loose-juice-wins-dare-academy-2026"
 			target="_blank"
 			class="text-xl underline decoration-zinc-700 decoration-wavy hover:decoration-fuchsia-300"
 		>
