@@ -18,6 +18,7 @@
 		| 'typescript'
 		| 'ui/ux'
 		| 'unity'
+		| 'vulkan'
 		| 'web';
 
 	const skillMeta: Record<Skill, { name: string; icon?: string }> = {
@@ -34,7 +35,8 @@
 		'node.js': { name: 'Node.js', icon: 'nodedotjs' },
 		svelte: { name: 'Svelte', icon: 'svelte' },
 		'ui/ux': { name: 'UI/UX', icon: 'layout' },
-		ai: { name: 'AI', icon: 'ghost' }
+		ai: { name: 'AI', icon: 'ghost' },
+		vulkan: { name: 'Vulkan' }
 	} as const;
 
 	interface Props {

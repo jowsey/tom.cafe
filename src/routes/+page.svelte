@@ -1,4 +1,5 @@
 <script lang="ts">
+	import InlineLink from '$lib/components/InlineLink.svelte';
 	import MainPageProject from '$lib/components/MainPageProject.svelte';
 	import MainPageProjectSection from '$lib/components/MainPageProjectSection.svelte';
 	import Page from '$lib/components/Page.svelte';
@@ -7,6 +8,11 @@
 <svelte:head>
 	<title>Portfolio • Thomas Jowsey</title>
 </svelte:head>
+
+<p class="px-4 pt-4 sm:px-8 sm:pt-12">
+	Hi! I'm Tom. Find more about me <InlineLink href="/about" label="here" />.<br />
+	See the links above <span class="max-sm:hidden">and to the left</span> for ways to get in touch!
+</p>
 
 <Page title="Portfolio">
 	<MainPageProject
@@ -105,6 +111,40 @@
 		</p>
 
 		<p>Our team used JIRA and Confluence extensively for project tracking, and practiced agile methodologies.</p>
+	</MainPageProject>
+
+	<MainPageProject
+		title="fate Engine"
+		subtitle="a cross-platform Vulkan renderer and engine"
+		year={2026}
+		images={['/images/fate-banner.webp', '/images/fate-editor.webp']}
+		skills={['c++', 'vulkan', 'tooling', 'ui/ux']}
+	>
+		<p class="border-l border-fuchsia-300 pl-4 text-zinc-300 italic">Currently in-development / work-in-progress!</p>
+		<p>A modern cross-platform Vulkan 1.3 renderer and engine in C++20.</p>
+
+		<MainPageProjectSection title="Rendering">
+			<ul class="list-disc">
+				<li>Modern bindless architecture</li>
+				<li>Physically based rendering with comprehensive material support</li>
+				<li>Slang shader support</li>
+			</ul>
+		</MainPageProjectSection>
+
+		<MainPageProjectSection title="Engine and editor">
+			<ul class="list-disc">
+				<li>Clean panel-based editor UI</li>
+				<li>Scene graph system</li>
+				<li>Automatic mesh & texture asset loading from disk</li>
+			</ul>
+		</MainPageProjectSection>
+
+		<MainPageProjectSection title="Build system and infrastructure">
+			<ul class="list-disc">
+				<li>Cross-platform CMake 4.3 builds for Windows, Linux, and MacOS</li>
+				<li>CI running across LLVM, GCC, and MSVC</li>
+			</ul>
+		</MainPageProjectSection>
 	</MainPageProject>
 
 	<MainPageProject
