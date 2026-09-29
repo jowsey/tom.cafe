@@ -220,6 +220,38 @@
 	</MainPageProject>
 
 	<MainPageProject
+		title="Juno"
+		subtitle="a spaceflight simulator AI training environment"
+		year={2025}
+		githubLink="https://github.com/jowsey/juno"
+		images={['/images/juno-launch.webp', '/images/juno-space.webp', '/images/juno-menu.webp']}
+		skills={['unity', 'c#', 'ai']}
+	>
+		<p>
+			A spaceflight-themed AI training sandbox in Unity 6.3.<br />
+			Networks learn real orbit strategies from first principles!
+		</p>
+
+		<MainPageProjectSection title="Inference and evolution">
+			<ul class="list-disc">
+				<li>
+					Built from-scratch ML inference in C#, simulating 100 agents at 100x+ realtime after environment overhead
+				</li>
+				<li>Hundreds of agents train in parallel across multiple generations</li>
+				<li>Custom shaped fitness function encourages early desired behaviors and final stable orbits</li>
+				<li>Hyperparameters can be adjusted both before and during training</li>
+			</ul>
+		</MainPageProjectSection>
+
+		<MainPageProjectSection title="Training environment">
+			<ul class="list-disc">
+				<li>Built semi-realistic orbital physics and rocketry simulation</li>
+				<li>Created a functional, user-friendly interface for monitoring training progress</li>
+			</ul>
+		</MainPageProjectSection>
+	</MainPageProject>
+
+	<MainPageProject
 		title="Overwatch 2 Data Tracker"
 		subtitle="a web app for tracking historical Overwatch 2 game data"
 		year={2025}
