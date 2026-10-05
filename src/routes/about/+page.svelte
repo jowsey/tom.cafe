@@ -22,7 +22,7 @@
 		<p>
 			I'm currently in my final year of study at Abertay University. I will graduate {@render topic('Summer 2027')}.
 			<br />I'm {@render topic('actively seeking graduate roles')}—feel free to
-			<InlineLink href="https://linkedin.com/in/jowsey" label="get in touch" />!
+			<InlineLink href="https://linkedin.com/in/jowsey">get in touch</InlineLink>!
 		</p>
 		<br />
 		<p>
@@ -38,13 +38,12 @@
 		<br />
 		<p>
 			I also take part in game jams! Since 2023, I've worked with teams on the PS2-inspired racer
-			<InlineLink href="https://jowsey.itch.io/underglow" label="Underglow" />; the factory-builder
-			<InlineLink href="https://enoshade.itch.io/goober-cloner" label="Goober Cloner" />; the incremental clicker
-			<InlineLink href="https://jowsey.itch.io/infectious" label="Infectious" />; the action spell-caster
-			<InlineLink href="https://jowsey.itch.io/sincantation" label="Sincantation" />; the aquatic tower-defence
-			<InlineLink href="https://kahoneki.itch.io/pondemonium" label="Pondemonium" />, and the whimsical multiplayer
-			racer
-			<InlineLink href="https://jowsey.itch.io/bathtime-blitz" label="Bathtime Blitz" />!
+			<InlineLink href="https://jowsey.itch.io/underglow">Underglow</InlineLink>; the factory-builder
+			<InlineLink href="https://enoshade.itch.io/goober-cloner">Goober Cloner</InlineLink>; the incremental clicker
+			<InlineLink href="https://jowsey.itch.io/infectious">Infectious</InlineLink>; the action spell-caster
+			<InlineLink href="https://jowsey.itch.io/sincantation">Sincantation</InlineLink>; the aquatic tower-defence
+			<InlineLink href="https://kahoneki.itch.io/pondemonium">Pondemonium</InlineLink>, and the multiplayer racer
+			<InlineLink href="https://jowsey.itch.io/bathtime-blitz">Bathtime Blitz</InlineLink>!
 		</p>
 		<br />
 		<StyledLink href="/" label="View my portfolio ↗" />

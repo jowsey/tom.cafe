@@ -10,7 +10,7 @@
 </svelte:head>
 
 <p class="px-4 pt-4 sm:px-8 sm:pt-12">
-	Hi! I'm Tom. Find more about me <InlineLink href="/about" label="here" />.<br />
+	Hi! I'm Tom. Find more about me <InlineLink href="/about">here</InlineLink>.<br />
 	See the links above <span class="max-sm:hidden">and to the left</span> for ways to get in touch!
 </p>
 
@@ -35,13 +35,19 @@
 			Programmer in a team of 7 from concept to release.
 		</p>
 
-		<a
-			href="https://fotb.itch.io/loose-juice/devlog/1653682/loose-juice-wins-dare-academy-2026"
-			target="_blank"
-			class="text-xl underline decoration-zinc-700 decoration-wavy hover:decoration-fuchsia-300"
+		<hr class="border-zinc-900" />
+
+		<InlineLink href="https://tiga.org/news/tiga-reveals-games-education-awards-2026-hall-of-fame">
+			<span class="font-semibold">🎉 New!</span> Loose Juice wins <b>TIGA Best Student Game 2026</b>!
+		</InlineLink>
+
+		<InlineLink
+			href="https://www.abertay.ac.uk/news/2026/finch-outside-the-box-announced-as-winner-of-abertay-university-s-dare-academy-2026/"
 		>
-			<span class="font-semibold">🎉 New!</span> Loose Juice wins DARE Academy 2026 & Audience Choice awards!
-		</a>
+			<span class="font-semibold">🎉</span> Loose Juice wins <b>DARE Academy 2026</b> & Audience Choice awards!
+		</InlineLink>
+
+		<hr class="border-zinc-900" />
 
 		<MainPageProjectSection
 			title="Native voice chat pipeline"
