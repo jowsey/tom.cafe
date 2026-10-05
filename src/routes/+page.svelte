@@ -1,8 +1,8 @@
 <script lang="ts">
-	import InlineLink from '$lib/components/InlineLink.svelte';
-	import MainPageProject from '$lib/components/MainPageProject.svelte';
-	import MainPageProjectSection from '$lib/components/MainPageProjectSection.svelte';
-	import Page from '$lib/components/Page.svelte';
+	import InlineLink from '#lib/components/InlineLink.svelte';
+	import MainPageProject from '#lib/components/MainPageProject.svelte';
+	import MainPageProjectSection from '#lib/components/MainPageProjectSection.svelte';
+	import Page from '#lib/components/Page.svelte';
 </script>
 
 <svelte:head>

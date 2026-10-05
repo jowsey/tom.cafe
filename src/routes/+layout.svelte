@@ -1,7 +1,7 @@
 <script lang="ts">
 	import './layout.css';
-	import StyledLink from '$lib/components/StyledLink.svelte';
-	import SidebarBlock from '$lib/components/SidebarBlock.svelte';
+	import StyledLink from '#lib/components/StyledLink.svelte';
+	import SidebarBlock from '#lib/components/SidebarBlock.svelte';
 	import { resolve } from '$app/paths';
 
 	let { children } = $props();

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import InlineLink from '$lib/components/InlineLink.svelte';
-	import Page from '$lib/components/Page.svelte';
-	import StyledLink from '$lib/components/StyledLink.svelte';
+	import InlineLink from '#lib/components/InlineLink.svelte';
+	import Page from '#lib/components/Page.svelte';
+	import StyledLink from '#lib/components/StyledLink.svelte';
 </script>
 
 <svelte:head>
