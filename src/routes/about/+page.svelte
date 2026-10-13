@@ -37,7 +37,7 @@
 		</p>
 		<br />
 		<p>
-			I also take part in game jams! Since 2023, I've worked with teams on the PS2-inspired racer
+			I also take part in game jams! I've worked both solo and with teams on: the PS2-inspired racer
 			<InlineLink href="https://jowsey.itch.io/underglow">Underglow</InlineLink>; the factory-builder
 			<InlineLink href="https://enoshade.itch.io/goober-cloner">Goober Cloner</InlineLink>; the incremental clicker
 			<InlineLink href="https://jowsey.itch.io/infectious">Infectious</InlineLink>; the action spell-caster
